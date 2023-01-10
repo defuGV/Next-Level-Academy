@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>2</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">ebbcef60977a511065dcf8b3f153afc0</sp_column>
+        <sp_widget display_value="My Items">6e449453c33030105a09f0ad9840ddf0</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>pelin.yaman</sys_created_by>
+        <sys_created_on>2022-10-24 15:18:12</sys_created_on>
+        <sys_id>2fbcef60977a511065dcf8b3f153afc2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_update_name>sp_instance_2fbcef60977a511065dcf8b3f153afc2</sys_update_name>
+        <sys_updated_by>pelin.yaman</sys_updated_by>
+        <sys_updated_on>2022-10-24 15:18:12</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"list_view_count": {
+		"value": "3",
+		"displayValue": "3"
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=2fbcef60977a511065dcf8b3f153afc2"/>
+</record_update>

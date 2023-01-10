@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_grid_canvas_pane">
+    <sys_grid_canvas_pane action="DELETE">
+        <grid_canvas display_value="PA Next Level Academy - New Tab">6d4f425b97ee151065dcf8b3f153afe3</grid_canvas>
+        <height>14</height>
+        <portal_widget display_value="Created 26.10.2022 12:41:35">c790cddd97b2111065dcf8b3f153af7b</portal_widget>
+        <posx>8</posx>
+        <posy>0</posy>
+        <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-26 10:41:35</sys_created_on>
+        <sys_id>5790cddd97b2111065dcf8b3f153af7e</sys_id>
+        <sys_mod_count>35</sys_mod_count>
+        <sys_name>6d4f425b97ee151065dcf8b3f153afe3</sys_name>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_update_name>sys_grid_canvas_pane_5790cddd97b2111065dcf8b3f153af7e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-26 10:42:36</sys_updated_on>
+        <width>4</width>
+    </sys_grid_canvas_pane>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</application>
+        <file_path/>
+        <instance_id>7bfca7911b8505507d9d2f8dee4bcbcc</instance_id>
+        <instance_name>dev121067</instance_name>
+        <name>sys_grid_canvas_pane_5790cddd97b2111065dcf8b3f153af7e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_grid_canvas_pane"><sys_grid_canvas_pane action="INSERT_OR_UPDATE"><grid_canvas display_value="PA Next Level Academy - New Tab">6d4f425b97ee151065dcf8b3f153afe3</grid_canvas><height>14</height><portal_widget display_value="Created 26.10.2022 12:41:35">c790cddd97b2111065dcf8b3f153af7b</portal_widget><posx>8</posx><posy>0</posy><sys_class_name>sys_grid_canvas_pane</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-10-26 10:41:35</sys_created_on><sys_id>5790cddd97b2111065dcf8b3f153af7e</sys_id><sys_mod_count>35</sys_mod_count><sys_name>6d4f425b97ee151065dcf8b3f153afe3</sys_name><sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package><sys_policy/><sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope><sys_update_name>sys_grid_canvas_pane_5790cddd97b2111065dcf8b3f153af7e</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-10-26 10:42:36</sys_updated_on><width>4</width></sys_grid_canvas_pane></record_update>]]></payload>
+        <payload_hash>-315321418</payload_hash>
+        <record_name>6d4f425b97ee151065dcf8b3f153afe3</record_name>
+        <reverted_from/>
+        <source>50dd4e529762511065dcf8b3f153aff8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-26 10:42:36</sys_created_on>
+        <sys_id>46d0051197f2111065dcf8b3f153af1b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18413e3068f0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-26 10:42:36</sys_updated_on>
+        <type>Grid Canvas Pane</type>
+        <update_guid>0ed0051149f21110398f86dce7e8421a</update_guid>
+        <update_guid_history>0ed0051149f21110398f86dce7e8421a:-315321418,0ed005116ef21110b785a9e313abb10c:-902713161,0ed041111af21110d5398bebebec8cf8:-1490104904,3dd0051150f21110af7a4fd53e237301:-2077496647,b1d041114cf21110bf66e4ece9aaf9e1:1630078906,39d04111e5f2111043342d269b6491c9:1042687163,75d0c111cdf211105635f30f684816f4:1004970705,f5d0c111f9f21110c4ee55b83b55c3e9:417578962,7dd081119cf21110baaa5d8821fc467a:-169812781,61d0c1112bf2111014f5e7d7f471f9ab:-757204524,0dd08ddd58b21110ec2201e39b599afd:-1344596267,c5d0811118f2111021c4b4fddf06446b:-1931988010,34d081119ef21110ec17fe5b6edee25c:1775587543,70d08ddd5fb211101ca6db6522ef9244:1188195800,3cd081110df21110bad447699fec4f2e:600804057,dec04111a5f21110e42f6f31f0c28234:13412314,a5c081112df21110f135f425259d2572:600804057,ddc0c5dda1b211103593b4e76f132957:1188195800,55c08ddd95b21110b5c8b2ce008593f5:1775587543,59c0c99dbcb21110b0745266623bf104:-1931988010,8dc049dd9ab2111032097f052fb97056:-1344596267,a8c08dddd8b21110dee2113bb742423b:-757204524,9cc049ddc8b211109c65d91ff63e2a98:-169812781,d8c049ddcbb21110c90844f52399e6ac:417578962,c8c049dd5cb211102e07224aee44c79e:1004970705,4cc0011193f21110ec26088908adc6c5:1042687163,2bb001113ef21110da81467465d55554:1630078906,ebb001113ef211103f79b59362c9ac4a:-2077496647,9fb0cddd4cb2111076f343f726648af4:-1490104904,feb0cddddfb211109cf871f703dd9a98:-902713161,b9b0cddd18b21110a7716a7242fb9885:-315321418,bfa0c9dd5fb211103237b85fb950e42e:291387070,46a085dd06b2111066c98ea2efaaf0e9:-125256134,35a0011176f21110570a784e33f8f742:-315321418,01a085dd88b21110a8d4c11c0513a1d2:291387070,1f90cdddedb21110b45517b20ecc827f:-698747403</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-26 10:43:54</sys_created_on>
+        <sys_db_object display_value="" name="sys_grid_canvas_pane">sys_grid_canvas_pane</sys_db_object>
+        <sys_id>0187b21a00a54db28c973c26082d0b49</sys_id>
+        <sys_metadata>5790cddd97b2111065dcf8b3f153af7e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>6d4f425b97ee151065dcf8b3f153afe3</sys_name>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_scope_delete display_value="">2e7aa6f7de234a9598a3fcc461402aa1</sys_scope_delete>
+        <sys_update_name>sys_grid_canvas_pane_5790cddd97b2111065dcf8b3f153af7e</sys_update_name>
+        <sys_update_version display_value="sys_grid_canvas_pane_5790cddd97b2111065dcf8b3f153af7e">46d0051197f2111065dcf8b3f153af1b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-26 10:43:54</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

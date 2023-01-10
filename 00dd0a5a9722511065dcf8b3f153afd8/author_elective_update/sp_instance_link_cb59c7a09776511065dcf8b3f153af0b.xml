@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_link">
+    <sp_instance_link action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <kb_article/>
+        <kb_category/>
+        <kb_topic/>
+        <order>1</order>
+        <roles/>
+        <sc_cat_item display_value="HR-Schulung für Teamleitende">63237bde97e6511065dcf8b3f153afd6</sc_cat_item>
+        <sc_category/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">57b80f609776511065dcf8b3f153af48</sp_column>
+        <sp_page display_value="nla_sc_item">2e538ba89736511065dcf8b3f153af28</sp_page>
+        <sp_widget display_value="Icon Link">3caa67afcb13020000f8d856634c9c2e</sp_widget>
+        <sys_class_name>sp_instance_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-24 12:43:37</sys_created_on>
+        <sys_id>cb59c7a09776511065dcf8b3f153af0b</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>HR-Schulung Teamleitende</sys_name>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_update_name>sp_instance_link_cb59c7a09776511065dcf8b3f153af0b</sys_update_name>
+        <sys_updated_by>pelin.yaman</sys_updated_by>
+        <sys_updated_on>2022-10-27 10:22:58</sys_updated_on>
+        <title>HR-Schulung Teamleitende</title>
+        <type>sc_cat_item</type>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"link_template": {
+		"value": "",
+		"displayValue": ""
+	}
+}]]></widget_parameters>
+    </sp_instance_link>
+    <sys_translated_text action="DELETE" query="documentkey=cb59c7a09776511065dcf8b3f153af0b"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</application>
+        <file_path/>
+        <instance_id>7bfca7911b8505507d9d2f8dee4bcbcc</instance_id>
+        <instance_name>dev121067</instance_name>
+        <name>sp_instance_link_cb59c7a09776511065dcf8b3f153af0b</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance_link"&gt;&lt;sp_instance_link action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css/&gt;&lt;glyph/&gt;&lt;id/&gt;&lt;kb_article/&gt;&lt;kb_category/&gt;&lt;kb_topic/&gt;&lt;order&gt;1&lt;/order&gt;&lt;roles/&gt;&lt;sc_cat_item display_value="HR-Schulung für Teamleitende"&gt;63237bde97e6511065dcf8b3f153afd6&lt;/sc_cat_item&gt;&lt;sc_category/&gt;&lt;short_description/&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="2"&gt;57b80f609776511065dcf8b3f153af48&lt;/sp_column&gt;&lt;sp_page display_value="nla_sc_item"&gt;2e538ba89736511065dcf8b3f153af28&lt;/sp_page&gt;&lt;sp_widget display_value="Icon Link"&gt;3caa67afcb13020000f8d856634c9c2e&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance_link&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-10-24 12:43:37&lt;/sys_created_on&gt;&lt;sys_id&gt;cb59c7a09776511065dcf8b3f153af0b&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;HR-Schulung Teamleitende&lt;/sys_name&gt;&lt;sys_package display_value="Next Level Academy" source="x_849329_nextlevel"&gt;00dd0a5a9722511065dcf8b3f153afd8&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Next Level Academy"&gt;00dd0a5a9722511065dcf8b3f153afd8&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_link_cb59c7a09776511065dcf8b3f153af0b&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;pelin.yaman&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-10-27 10:22:58&lt;/sys_updated_on&gt;&lt;title&gt;HR-Schulung Teamleitende&lt;/title&gt;&lt;type&gt;sc_cat_item&lt;/type&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"link_template": {
+		"value": "",
+		"displayValue": ""
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance_link&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=cb59c7a09776511065dcf8b3f153af0b"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-718870903</payload_hash>
+        <record_name>HR-Schulung Teamleitende</record_name>
+        <reverted_from/>
+        <source>50dd4e529762511065dcf8b3f153aff8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>pelin.yaman</sys_created_by>
+        <sys_created_on>2022-10-27 10:22:58</sys_created_on>
+        <sys_id>58f54a69973a511065dcf8b3f153afde</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18418f768fb0000001</sys_recorded_at>
+        <sys_updated_by>pelin.yaman</sys_updated_by>
+        <sys_updated_on>2022-10-27 10:22:58</sys_updated_on>
+        <type>Instance with Link</type>
+        <update_guid>10f54a69b83a51103c9c2ef8512511de</update_guid>
+        <update_guid_history>10f54a69b83a51103c9c2ef8512511de:-718870903,728d9f60f73a51105d60b6d854a24a5e:-462806902,0689cba06c7651101fbb96a631e1f5a2:337156586,9359c7a0757651108cbd173aeeb47d0d:1778409990</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="HR-Schulung Teamleitende">01f5c669973a511065dcf8b3f153af7e</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>pelin.yaman</sys_created_by>
+        <sys_created_on>2022-10-27 10:23:02</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_link">sp_instance_link</sys_db_object>
+        <sys_id>321c22417df0442e8f6d7c0d89786601</sys_id>
+        <sys_metadata>cb59c7a09776511065dcf8b3f153af0b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>HR-Schulung Teamleitende</sys_name>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_scope_delete display_value="">2e7aa6f7de234a9598a3fcc461402aa1</sys_scope_delete>
+        <sys_update_name>sp_instance_link_cb59c7a09776511065dcf8b3f153af0b</sys_update_name>
+        <sys_update_version display_value="sp_instance_link_cb59c7a09776511065dcf8b3f153af0b">58f54a69973a511065dcf8b3f153afde</sys_update_version>
+        <sys_updated_by>pelin.yaman</sys_updated_by>
+        <sys_updated_on>2022-10-27 10:23:02</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

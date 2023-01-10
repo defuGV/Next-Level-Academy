@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_link">
+    <sp_instance_link action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph>graduation-cap</glyph>
+        <id/>
+        <kb_article/>
+        <kb_category/>
+        <kb_topic/>
+        <order>1</order>
+        <roles/>
+        <sc_cat_item/>
+        <sc_category/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">1677f92997f6511065dcf8b3f153af79</sp_column>
+        <sp_page/>
+        <sp_widget display_value="Icon Link">3caa67afcb13020000f8d856634c9c2e</sp_widget>
+        <sys_class_name>sp_instance_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-27 09:28:46</sys_created_on>
+        <sys_id>d28975e997f6511065dcf8b3f153afc0</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Neue Schulung eintragen</sys_name>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_update_name>sp_instance_link_d28975e997f6511065dcf8b3f153afc0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-27 09:30:24</sys_updated_on>
+        <title>Neue Schulung eintragen</title>
+        <type>url</type>
+        <url>https://dev121067.service-now.com/now/nav/ui/classic/params/target/x_849329_nextlevel_schulung.do%3Fsys_id%3D-1%26sysparm_stack%3Dx_849329_nextlevel_schulung_list.do</url>
+        <widget_parameters><![CDATA[{
+	"link_template": {
+		"value": "Top Icon",
+		"displayValue": "Top Icon"
+	}
+}]]></widget_parameters>
+    </sp_instance_link>
+    <sys_translated_text action="delete_multiple" query="documentkey=d28975e997f6511065dcf8b3f153afc0"/>
+</record_update>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="score_f_r_trainer" label="Score für Trainer" language="en" table="x_849329_nextlevel_feedback_scores">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>score_f_r_trainer</element>
+            <help/>
+            <hint/>
+            <label>Score für Trainer</label>
+            <language>en</language>
+            <name>x_849329_nextlevel_feedback_scores</name>
+            <plural>Score für Trainers</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>gesche.heitmann</sys_created_by>
+            <sys_created_on>2022-10-27 09:57:57</sys_created_on>
+            <sys_id>bd30c2e1973a511065dcf8b3f153af0d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Score für Trainer</sys_name>
+            <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+            <sys_update_name>sys_documentation_x_849329_nextlevel_feedback_scores_score_f_r_trainer_en</sys_update_name>
+            <sys_updated_by>gesche.heitmann</sys_updated_by>
+            <sys_updated_on>2022-10-27 09:57:57</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

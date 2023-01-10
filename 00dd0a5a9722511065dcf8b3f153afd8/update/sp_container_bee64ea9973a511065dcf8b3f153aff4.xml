@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
+    <sp_container action="INSERT_OR_UPDATE">
+        <background_color>#EEECEF</background_color>
+        <background_image/>
+        <background_style>default</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name/>
+        <container_class_name/>
+        <name>Copy of Tanjas Portal (1) - Container 3</name>
+        <order>3</order>
+        <sp_page display_value="copy_of_tanjas_portal_1">e2e60ea9973a511065dcf8b3f153af3e</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>gesche.heitmann</sys_created_by>
+        <sys_created_on>2022-10-27 10:27:14</sys_created_on>
+        <sys_id>bee64ea9973a511065dcf8b3f153aff4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Copy of Tanjas Portal (1) - Container 3</sys_name>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_update_name>sp_container_bee64ea9973a511065dcf8b3f153aff4</sys_update_name>
+        <sys_updated_by>gesche.heitmann</sys_updated_by>
+        <sys_updated_on>2022-10-27 10:27:14</sys_updated_on>
+        <title/>
+        <width>container</width>
+    </sp_container>
+</record_update>

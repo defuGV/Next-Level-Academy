@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="sys_import_set_row" label="Computer" max_length="40" name="imp_computer" sizeclass="0" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=E-Mail" label="E-Mail" max_length="40" name="u_e_mail" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Nachname" label="Nachname" max_length="40" name="u_nachname" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Schulung" label="Schulung" max_length="40" name="u_schulung" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Schulungsbuchung" label="Schulungsbuchung" max_length="40" name="u_schulungsbuchung" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Unternehmen" label="Unternehmen" max_length="40" name="u_unternehmen" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Vorname" label="Vorname" max_length="40" name="u_vorname" type="string"/>
+    </element>
+</database>

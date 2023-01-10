@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Zahlungsdaten" max_length="40" name="x_849329_nextlevel_zahlungsdaten" sizeclass="16" type="collection">
+        <element label="Ablaufdatum" mandatory="true" max_length="40" name="ablaufdatum" type="glide_date"/>
+        <element label="Karteninhaber" mandatory="true" max_length="255" name="karteninhaber" type="string_full_utf8"/>
+        <element label="Kartennummer" mandatory="true" max_length="40" name="kartennummer" type="string"/>
+        <element choice="1" label="Kartentyp" mandatory="true" max_length="40" name="kartentyp" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Mastercard" value="mastercard"/>
+                <element inactive_on_update="false" label="Visa" value="visa"/>
+            </choice>
+        </element>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Prüfziffer" mandatory="true" max_length="40" name="prufziffer" type="integer"/>
+    </element>
+</database>

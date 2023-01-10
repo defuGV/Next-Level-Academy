@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>10</order>
+        <role display_value="x_849329_nextlevel.admin" name="x_849329_nextlevel.admin">00a2c10797ead11065dcf8b3f153af6c</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-19 11:04:15</sys_created_on>
+        <sys_id>f2a28dc397ead11065dcf8b3f153af56</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>00a2c10797ead11065dcf8b3f153af6c</sys_name>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_update_name>sys_embedded_help_role_f2a28dc397ead11065dcf8b3f153af56</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-19 11:04:15</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

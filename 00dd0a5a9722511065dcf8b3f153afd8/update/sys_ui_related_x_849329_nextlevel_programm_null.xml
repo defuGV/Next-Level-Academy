@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_related sys_domain="global" table="x_849329_nextlevel_programm" version="2" view="">
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Programme - Default view" name="x_849329_nextlevel_programm" related_list="NULL" sys_domain="global" view="Default view">4189e18397aed11065dcf8b3f153af63</list_id>
+            <order_by/>
+            <position>0</position>
+            <related_list>x_849329_nextlevel_schulung.programm</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-10-19 13:53:58</sys_created_on>
+            <sys_id>4d89e18397aed11065dcf8b3f153af63</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-10-19 13:53:58</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Programme - Default view" name="x_849329_nextlevel_programm" related_list="NULL" sys_domain="global" view="Default view">4189e18397aed11065dcf8b3f153af63</list_id>
+            <order_by/>
+            <position>1</position>
+            <related_list>sys_user.x_849329_nextlevel_programm</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-10-19 13:53:58</sys_created_on>
+            <sys_id>4589e18397aed11065dcf8b3f153af64</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-10-19 13:53:58</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list action="INSERT_OR_UPDATE">
+            <calculated_name>Programme - Default view</calculated_name>
+            <filter/>
+            <name>x_849329_nextlevel_programm</name>
+            <order_by/>
+            <position/>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-10-19 13:53:58</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4189e18397aed11065dcf8b3f153af63</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Programme - Default view</sys_name>
+            <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+            <sys_update_name>sys_ui_related_x_849329_nextlevel_programm_null</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-10-19 13:53:58</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_related_list>
+    </sys_ui_related>
+</record_update>

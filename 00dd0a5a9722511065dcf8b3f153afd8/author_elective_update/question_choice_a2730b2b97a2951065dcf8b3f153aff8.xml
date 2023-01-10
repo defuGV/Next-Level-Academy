@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="DELETE">
+        <inactive>false</inactive>
+        <order>200</order>
+        <published_ref display_value="Mastercard">0b72c3e797a2951065dcf8b3f153af67</published_ref>
+        <question display_value="Kartentyp (Visa/Mastercard)">aa73872b97a2951065dcf8b3f153afff</question>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-21 09:43:59</sys_created_on>
+        <sys_id>a2730b2b97a2951065dcf8b3f153aff8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Mastercard</sys_name>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_update_name>question_choice_a2730b2b97a2951065dcf8b3f153aff8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-21 09:43:59</sys_updated_on>
+        <text>Mastercard</text>
+        <value>mastercard</value>
+    </question_choice>
+    <fx_price action="DELETE" query="id=a2730b2b97a2951065dcf8b3f153aff8"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</application>
+        <file_path/>
+        <instance_id>7bfca7911b8505507d9d2f8dee4bcbcc</instance_id>
+        <instance_name>dev121067</instance_name>
+        <name>question_choice_a2730b2b97a2951065dcf8b3f153aff8</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice"><question_choice action="INSERT_OR_UPDATE"><inactive>false</inactive><order>200</order><published_ref display_value="Mastercard">0b72c3e797a2951065dcf8b3f153af67</published_ref><question display_value="Kartentyp (Visa/Mastercard)">aa73872b97a2951065dcf8b3f153afff</question><sys_class_name>question_choice</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-10-21 09:43:59</sys_created_on><sys_id>a2730b2b97a2951065dcf8b3f153aff8</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Mastercard</sys_name><sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package><sys_policy/><sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope><sys_update_name>question_choice_a2730b2b97a2951065dcf8b3f153aff8</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-10-21 09:43:59</sys_updated_on><text>Mastercard</text><value>mastercard</value></question_choice><fx_price action="delete_multiple" query="id=a2730b2b97a2951065dcf8b3f153aff8"/></record_update>]]></payload>
+        <payload_hash>452298122</payload_hash>
+        <record_name>Mastercard</record_name>
+        <reverted_from/>
+        <source>50dd4e529762511065dcf8b3f153aff8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-21 09:43:59</sys_created_on>
+        <sys_id>ee730b2b97a2951065dcf8b3f153affa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183f9ed8ff80000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-21 09:43:59</sys_updated_on>
+        <type>Question Choice</type>
+        <update_guid>26730b2beea29510ac144034e51f80fa</update_guid>
+        <update_guid_history>26730b2beea29510ac144034e51f80fa:452298122</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Mastercard">6db34f2b97a2951065dcf8b3f153afc8</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-10-21 09:45:00</sys_created_on>
+        <sys_db_object display_value="" name="question_choice">question_choice</sys_db_object>
+        <sys_id>322dc4008b2c45c2a3481a7a58cf5a44</sys_id>
+        <sys_metadata>a2730b2b97a2951065dcf8b3f153aff8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Mastercard</sys_name>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_parent display_value="">aa73872b97a2951065dcf8b3f153afff</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_scope_delete display_value="">2e7aa6f7de234a9598a3fcc461402aa1</sys_scope_delete>
+        <sys_update_name>question_choice_a2730b2b97a2951065dcf8b3f153aff8</sys_update_name>
+        <sys_update_version display_value="question_choice_a2730b2b97a2951065dcf8b3f153aff8">ee730b2b97a2951065dcf8b3f153affa</sys_update_version>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-10-21 09:45:00</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

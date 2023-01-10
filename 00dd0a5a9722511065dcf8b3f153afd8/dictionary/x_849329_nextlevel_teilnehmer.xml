@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="hasLabels=true" label="Teilnehmer" max_length="40" name="x_849329_nextlevel_teilnehmer" sizeclass="2" type="collection">
+        <element label="E-mail" max_length="40" name="e_mail" type="string"/>
+        <element label="Nachname" max_length="40" name="nachname" type="string"/>
+        <element label="Schulung" max_length="32" name="schulung" reference="x_849329_nextlevel_schulung" type="reference"/>
+        <element label="Schulungsbuchung" max_length="32" name="schulungsbuchung" reference="x_849329_nextlevel_schulungsbuchungen" type="reference"/>
+        <element label="Vorname" max_length="40" name="vorname" type="string"/>
+        <index name="index">
+            <element name="schulungsbuchung"/>
+        </index>
+        <index name="index2">
+            <element name="schulung"/>
+        </index>
+    </element>
+</database>

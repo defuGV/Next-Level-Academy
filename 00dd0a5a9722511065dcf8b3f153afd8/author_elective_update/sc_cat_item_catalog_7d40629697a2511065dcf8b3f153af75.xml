@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog">
+    <sc_cat_item_catalog action="DELETE">
+        <sc_cat_item display_value="Microsoft Office 365 Schulung">f540e65697a2511065dcf8b3f153afce</sc_cat_item>
+        <sc_catalog display_value="Service Catalog">e0d08b13c3330100c8b837659bba8fb4</sc_catalog>
+        <sys_class_name>sc_cat_item_catalog</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-17 09:57:47</sys_created_on>
+        <sys_id>7d40629697a2511065dcf8b3f153af75</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Service Catalog.Microsoft Office 365 Schulung</sys_name>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_update_name>sc_cat_item_catalog_7d40629697a2511065dcf8b3f153af75</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-17 09:57:47</sys_updated_on>
+    </sc_cat_item_catalog>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</application>
+        <file_path/>
+        <instance_id>7bfca7911b8505507d9d2f8dee4bcbcc</instance_id>
+        <instance_name>dev121067</instance_name>
+        <name>sc_cat_item_catalog_7d40629697a2511065dcf8b3f153af75</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog"><sc_cat_item_catalog action="INSERT_OR_UPDATE"><sc_cat_item display_value="Microsoft Office 365 Schulung">f540e65697a2511065dcf8b3f153afce</sc_cat_item><sc_catalog display_value="Service Catalog">e0d08b13c3330100c8b837659bba8fb4</sc_catalog><sys_class_name>sc_cat_item_catalog</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-10-17 09:57:47</sys_created_on><sys_id>7d40629697a2511065dcf8b3f153af75</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Service Catalog.Microsoft Office 365 Schulung</sys_name><sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package><sys_policy/><sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope><sys_update_name>sc_cat_item_catalog_7d40629697a2511065dcf8b3f153af75</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-10-17 09:57:47</sys_updated_on></sc_cat_item_catalog></record_update>]]></payload>
+        <payload_hash>-1437643413</payload_hash>
+        <record_name>Service Catalog.Microsoft Office 365 Schulung</record_name>
+        <reverted_from/>
+        <source>50dd4e529762511065dcf8b3f153aff8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-17 09:57:47</sys_created_on>
+        <sys_id>3940629697a2511065dcf8b3f153af78</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183e560c2d30000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-17 09:57:47</sys_updated_on>
+        <type>Catalog Items Catalog</type>
+        <update_guid>bd40629641a251102ad23b22e316af77</update_guid>
+        <update_guid_history>bd40629641a251102ad23b22e316af77:-1437643413</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Service Catalog.Microsoft Office 365 Schulung">9250269697a2511065dcf8b3f153af92</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-17 09:58:05</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item_catalog">sc_cat_item_catalog</sys_db_object>
+        <sys_id>25ead5fff0f44dd890841500b68856c4</sys_id>
+        <sys_metadata>7d40629697a2511065dcf8b3f153af75</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Service Catalog.Microsoft Office 365 Schulung</sys_name>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_scope_delete display_value="">2e7aa6f7de234a9598a3fcc461402aa1</sys_scope_delete>
+        <sys_update_name>sc_cat_item_catalog_7d40629697a2511065dcf8b3f153af75</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_catalog_7d40629697a2511065dcf8b3f153af75">3940629697a2511065dcf8b3f153af78</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-17 09:58:05</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

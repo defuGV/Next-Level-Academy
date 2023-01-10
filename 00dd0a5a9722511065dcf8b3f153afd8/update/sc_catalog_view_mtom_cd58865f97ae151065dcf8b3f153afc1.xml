@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_catalog_view_mtom">
+    <sc_catalog_view_mtom action="INSERT_OR_UPDATE">
+        <default>true</default>
+        <sc_catalog display_value="Next Level Academy Schulungen">03384e5f97ae151065dcf8b3f153af3a</sc_catalog>
+        <sys_class_name>sc_catalog_view_mtom</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-20 10:47:04</sys_created_on>
+        <sys_id>cd58865f97ae151065dcf8b3f153afc1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Next Level Academy Schulungen.catalog_next_level_academy_schulungen</sys_name>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_policy/>
+        <sys_portal_page display_value="catalog_next_level_academy_schulungen">8558865f97ae151065dcf8b3f153afc0</sys_portal_page>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_update_name>sc_catalog_view_mtom_cd58865f97ae151065dcf8b3f153afc1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-20 10:47:04</sys_updated_on>
+    </sc_catalog_view_mtom>
+</record_update>

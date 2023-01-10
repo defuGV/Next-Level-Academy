@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_table">
+    <sp_instance_table action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <display_field/>
+        <field_list/>
+        <filter table="x_849329_nextlevel_schulung">kursstatusIN1,2<item display_value="1,2" endquery="false" field="kursstatus" goto="false" newquery="false" operator="IN" or="false" value="1,2"/>
+        </filter>
+        <glyph>graduation-cap</glyph>
+        <id/>
+        <maximum_entries>5</maximum_entries>
+        <order>1</order>
+        <order_by>startdatum</order_by>
+        <order_direction>asc</order_direction>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">1a47f92997f6511065dcf8b3f153af0d</sp_column>
+        <sp_page/>
+        <sp_widget display_value="Data Table from Instance Definition">38058ff1cb11020000f8d856634c9c8c</sp_widget>
+        <sys_class_name>sp_instance_table</sys_class_name>
+        <sys_created_by>Tanja.Tester</sys_created_by>
+        <sys_created_on>2022-10-27 09:07:42</sys_created_on>
+        <sys_id>e9b4f96597f6511065dcf8b3f153afc4</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Übersicht der aktiven Schulungen</sys_name>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_update_name>sp_instance_table_e9b4f96597f6511065dcf8b3f153afc4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-27 10:39:47</sys_updated_on>
+        <table>x_849329_nextlevel_schulung</table>
+        <title>Übersicht der aktiven Schulungen</title>
+        <url/>
+        <widget_parameters/>
+    </sp_instance_table>
+    <sys_translated_text action="delete_multiple" query="documentkey=e9b4f96597f6511065dcf8b3f153afc4"/>
+</record_update>

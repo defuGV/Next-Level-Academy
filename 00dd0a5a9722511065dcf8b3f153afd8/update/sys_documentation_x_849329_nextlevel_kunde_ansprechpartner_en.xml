@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="ansprechpartner" label="Ansprechpartner" language="en" table="x_849329_nextlevel_kunde">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>ansprechpartner</element>
+            <help/>
+            <hint/>
+            <label>Ansprechpartner</label>
+            <language>en</language>
+            <name>x_849329_nextlevel_kunde</name>
+            <plural>Ansprechpartners</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>gesche.heitmann</sys_created_by>
+            <sys_created_on>2022-10-20 12:05:36</sys_created_on>
+            <sys_id>a34a9a579722551065dcf8b3f153afea</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Ansprechpartner</sys_name>
+            <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+            <sys_update_name>sys_documentation_x_849329_nextlevel_kunde_ansprechpartner_en</sys_update_name>
+            <sys_updated_by>gesche.heitmann</sys_updated_by>
+            <sys_updated_on>2022-10-20 12:05:36</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

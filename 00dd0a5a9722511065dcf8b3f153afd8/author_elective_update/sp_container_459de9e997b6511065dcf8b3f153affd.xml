@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
+    <sp_container action="DELETE">
+        <background_color/>
+        <background_image/>
+        <background_style>default</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name/>
+        <container_class_name/>
+        <name>Tanjas Portal - Container 1</name>
+        <order>1</order>
+        <sp_page display_value="tanjas_portal">6d78ed6597b6511065dcf8b3f153af7e</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-27 08:36:31</sys_created_on>
+        <sys_id>459de9e997b6511065dcf8b3f153affd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Tanjas Portal - Container 1</sys_name>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_update_name>sp_container_459de9e997b6511065dcf8b3f153affd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-27 08:36:31</sys_updated_on>
+        <title/>
+        <width>container</width>
+    </sp_container>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</application>
+        <file_path/>
+        <instance_id>7bfca7911b8505507d9d2f8dee4bcbcc</instance_id>
+        <instance_name>dev121067</instance_name>
+        <name>sp_container_459de9e997b6511065dcf8b3f153affd</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container"><sp_container action="INSERT_OR_UPDATE"><background_color/><background_image/><background_style>default</background_style><bootstrap_alt>false</bootstrap_alt><class_name/><container_class_name/><name>Tanjas Portal - Container 1</name><order>1</order><sp_page display_value="tanjas_portal">6d78ed6597b6511065dcf8b3f153af7e</sp_page><subheader>false</subheader><sys_class_name>sp_container</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-10-27 08:36:31</sys_created_on><sys_id>459de9e997b6511065dcf8b3f153affd</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Tanjas Portal - Container 1</sys_name><sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package><sys_policy/><sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope><sys_update_name>sp_container_459de9e997b6511065dcf8b3f153affd</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-10-27 08:36:31</sys_updated_on><title/><width>container</width></sp_container></record_update>]]></payload>
+        <payload_hash>-663777566</payload_hash>
+        <record_name>Tanjas Portal - Container 1</record_name>
+        <reverted_from/>
+        <source>50dd4e529762511065dcf8b3f153aff8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-27 08:36:31</sys_created_on>
+        <sys_id>419de9e997b6511065dcf8b3f153afff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1841895f54d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-27 08:36:31</sys_updated_on>
+        <type>Container</type>
+        <update_guid>499de9e994b65110cd61e679b831bcfe</update_guid>
+        <update_guid_history>499de9e994b65110cd61e679b831bcfe:-663777566</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Tanjas Portal - Container 1">7c9fa5ad97b6511065dcf8b3f153afd4</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-27 08:45:14</sys_created_on>
+        <sys_db_object display_value="" name="sp_container">sp_container</sys_db_object>
+        <sys_id>7c05ae548e6c400a9348997c32aa07e9</sys_id>
+        <sys_metadata>459de9e997b6511065dcf8b3f153affd</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Tanjas Portal - Container 1</sys_name>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_scope_delete display_value="">2e7aa6f7de234a9598a3fcc461402aa1</sys_scope_delete>
+        <sys_update_name>sp_container_459de9e997b6511065dcf8b3f153affd</sys_update_name>
+        <sys_update_version display_value="sp_container_459de9e997b6511065dcf8b3f153affd">419de9e997b6511065dcf8b3f153afff</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-27 08:45:14</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

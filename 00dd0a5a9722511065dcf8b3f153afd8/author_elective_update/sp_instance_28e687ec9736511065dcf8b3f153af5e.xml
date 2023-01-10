@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">a4e687ec9736511065dcf8b3f153af5c</sp_column>
+        <sp_widget display_value="SC Scroll to top">9cfd91940b4103002600425663673a31</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-24 12:32:47</sys_created_on>
+        <sys_id>28e687ec9736511065dcf8b3f153af5e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_update_name>sp_instance_28e687ec9736511065dcf8b3f153af5e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-24 12:32:47</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance>
+    <sys_translated_text action="DELETE" query="documentkey=28e687ec9736511065dcf8b3f153af5e"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</application>
+        <file_path/>
+        <instance_id>7bfca7911b8505507d9d2f8dee4bcbcc</instance_id>
+        <instance_name>dev121067</instance_name>
+        <name>sp_instance_28e687ec9736511065dcf8b3f153af5e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance"><sp_instance action="INSERT_OR_UPDATE"><active>true</active><class_name/><color>default</color><css/><glyph/><id/><order>1</order><roles/><short_description/><size>md</size><sp_column display_value="1">a4e687ec9736511065dcf8b3f153af5c</sp_column><sp_widget display_value="SC Scroll to top">9cfd91940b4103002600425663673a31</sp_widget><sys_class_name>sp_instance</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-10-24 12:32:47</sys_created_on><sys_id>28e687ec9736511065dcf8b3f153af5e</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package><sys_policy/><sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope><sys_update_name>sp_instance_28e687ec9736511065dcf8b3f153af5e</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-10-24 12:32:47</sys_updated_on><title/><url/><widget_parameters/></sp_instance><sys_translated_text action="delete_multiple" query="documentkey=28e687ec9736511065dcf8b3f153af5e"/></record_update>]]></payload>
+        <payload_hash>1016807202</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>50dd4e529762511065dcf8b3f153aff8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-24 12:32:47</sys_created_on>
+        <sys_id>a4e687ec9736511065dcf8b3f153af60</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18409fb30460000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-24 12:32:47</sys_updated_on>
+        <type>Instance</type>
+        <update_guid>ace687ecd136511009a73aa8fae72d5f</update_guid>
+        <update_guid_history>ace687ecd136511009a73aa8fae72d5f:1016807202</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">4c5a2de597b6511065dcf8b3f153afe4</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>pelin.yaman</sys_created_by>
+        <sys_created_on>2022-10-27 08:22:16</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance">sp_instance</sys_db_object>
+        <sys_id>8f0d07b773a140dcb8af88757669d924</sys_id>
+        <sys_metadata>28e687ec9736511065dcf8b3f153af5e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_scope_delete display_value="">2e7aa6f7de234a9598a3fcc461402aa1</sys_scope_delete>
+        <sys_update_name>sp_instance_28e687ec9736511065dcf8b3f153af5e</sys_update_name>
+        <sys_update_version display_value="sp_instance_28e687ec9736511065dcf8b3f153af5e">a4e687ec9736511065dcf8b3f153af60</sys_update_version>
+        <sys_updated_by>pelin.yaman</sys_updated_by>
+        <sys_updated_on>2022-10-27 08:22:16</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

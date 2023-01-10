@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number">
+    <sys_number action="INSERT_OR_UPDATE">
+        <category display_value="" name="x_849329_nextlevel_zusatzangebote">x_849329_nextlevel_zusatzangebote</category>
+        <maximum_digits>2</maximum_digits>
+        <number>1</number>
+        <prefix>ZUS</prefix>
+        <sys_class_name>sys_number</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-18 19:33:50</sys_created_on>
+        <sys_id>3dbde13697ae911065dcf8b3f153afa4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ZUS</sys_name>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_update_name>sys_number_3dbde13697ae911065dcf8b3f153afa4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-18 19:33:50</sys_updated_on>
+    </sys_number>
+</record_update>

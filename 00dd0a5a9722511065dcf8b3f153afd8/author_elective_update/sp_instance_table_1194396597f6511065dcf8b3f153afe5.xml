@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_table">
+    <sp_instance_table action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <display_field/>
+        <field_list/>
+        <filter/>
+        <glyph/>
+        <id/>
+        <maximum_entries>5</maximum_entries>
+        <order>1</order>
+        <order_by/>
+        <order_direction>asc</order_direction>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">d29fe5ad97b6511065dcf8b3f153afbc</sp_column>
+        <sp_page/>
+        <sp_widget display_value="Table Reference">1dbb29f147001200ba13a5554ee49014</sp_widget>
+        <sys_class_name>sp_instance_table</sys_class_name>
+        <sys_created_by>Tanja.Tester</sys_created_by>
+        <sys_created_on>2022-10-27 09:07:08</sys_created_on>
+        <sys_id>1194396597f6511065dcf8b3f153afe5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_update_name>sp_instance_table_1194396597f6511065dcf8b3f153afe5</sys_update_name>
+        <sys_updated_by>Tanja.Tester</sys_updated_by>
+        <sys_updated_on>2022-10-27 09:07:08</sys_updated_on>
+        <table/>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance_table>
+    <sys_translated_text action="DELETE" query="documentkey=1194396597f6511065dcf8b3f153afe5"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</application>
+        <file_path/>
+        <instance_id>7bfca7911b8505507d9d2f8dee4bcbcc</instance_id>
+        <instance_name>dev121067</instance_name>
+        <name>sp_instance_table_1194396597f6511065dcf8b3f153afe5</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_table"><sp_instance_table action="INSERT_OR_UPDATE"><active>true</active><class_name/><color>default</color><css/><display_field/><field_list/><filter/><glyph/><id/><maximum_entries>5</maximum_entries><order>1</order><order_by/><order_direction>asc</order_direction><roles/><short_description/><size>md</size><sp_column display_value="2">d29fe5ad97b6511065dcf8b3f153afbc</sp_column><sp_page/><sp_widget display_value="Table Reference">1dbb29f147001200ba13a5554ee49014</sp_widget><sys_class_name>sp_instance_table</sys_class_name><sys_created_by>Tanja.Tester</sys_created_by><sys_created_on>2022-10-27 09:07:08</sys_created_on><sys_id>1194396597f6511065dcf8b3f153afe5</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package><sys_policy/><sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope><sys_update_name>sp_instance_table_1194396597f6511065dcf8b3f153afe5</sys_update_name><sys_updated_by>Tanja.Tester</sys_updated_by><sys_updated_on>2022-10-27 09:07:08</sys_updated_on><table/><title/><url/><widget_parameters/></sp_instance_table><sys_translated_text action="delete_multiple" query="documentkey=1194396597f6511065dcf8b3f153afe5"/></record_update>]]></payload>
+        <payload_hash>262936525</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>50dd4e529762511065dcf8b3f153aff8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>Tanja.Tester</sys_created_by>
+        <sys_created_on>2022-10-27 09:07:08</sys_created_on>
+        <sys_id>9194396597f6511065dcf8b3f153afe7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18418b1fb130000001</sys_recorded_at>
+        <sys_updated_by>Tanja.Tester</sys_updated_by>
+        <sys_updated_on>2022-10-27 09:07:08</sys_updated_on>
+        <type>Instance with Table</type>
+        <update_guid>9994396554f65110c89f8279a3fd04e6</update_guid>
+        <update_guid_history>9994396554f65110c89f8279a3fd04e6:262936525</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">c794396597f6511065dcf8b3f153af89</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>Tanja.Tester</sys_created_by>
+        <sys_created_on>2022-10-27 09:07:15</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_table">sp_instance_table</sys_db_object>
+        <sys_id>349bfc93708d46909d66c20e8f8bbf44</sys_id>
+        <sys_metadata>1194396597f6511065dcf8b3f153afe5</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_scope_delete display_value="">2e7aa6f7de234a9598a3fcc461402aa1</sys_scope_delete>
+        <sys_update_name>sp_instance_table_1194396597f6511065dcf8b3f153afe5</sys_update_name>
+        <sys_update_version display_value="sp_instance_table_1194396597f6511065dcf8b3f153afe5">9194396597f6511065dcf8b3f153afe7</sys_update_version>
+        <sys_updated_by>Tanja.Tester</sys_updated_by>
+        <sys_updated_on>2022-10-27 09:07:15</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

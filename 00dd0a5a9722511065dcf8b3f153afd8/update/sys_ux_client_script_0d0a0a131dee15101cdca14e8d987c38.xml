@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <includes/>
+        <macroponent display_value="Landing Page">890a0a1377ee15109e21b53277b1203c</macroponent>
+        <name>On search </name>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ */
+function handler({
+    api,
+    event,
+    helpers,
+    imports
+}) {
+
+    const {
+        searchContextConfigId,
+        searchTerm
+    } = event.payload;
+    
+    api.emit('NAV_ITEM_SELECTED', {
+        route: "search",
+        fields: {
+            searchContextConfigId
+        },
+        params: {
+            searchTerm
+        }
+    });
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-10-20 10:54:28</sys_created_on>
+        <sys_id>0d0a0a131dee15101cdca14e8d987c38</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>On search</sys_name>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_update_name>sys_ux_client_script_0d0a0a131dee15101cdca14e8d987c38</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-10-20 10:54:28</sys_updated_on>
+        <type/>
+    </sys_ux_client_script>
+</record_update>

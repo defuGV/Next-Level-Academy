@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="INSERT_OR_UPDATE">
+        <inactive>false</inactive>
+        <misc>300</misc>
+        <order>200</order>
+        <published_ref/>
+        <question display_value="Bitte optional Zusatzangebot hinzufügen">13bea65a97e2511065dcf8b3f153af72</question>
+        <rec_misc>0</rec_misc>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-27 14:31:42</sys_created_on>
+        <sys_id>1c12b79e97e6511065dcf8b3f153af75</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Zusatz 2: Mit Microsoft Teams arbeiten</sys_name>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_update_name>question_choice_1c12b79e97e6511065dcf8b3f153af75</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-10-27 14:42:05</sys_updated_on>
+        <text>Zusatz 2: Mit Microsoft Teams arbeiten</text>
+        <value>z2</value>
+    </question_choice>
+    <fx_price action="delete_multiple" query="id=1c12b79e97e6511065dcf8b3f153af75"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>300</amount>
+        <currency display_value="EUR">EUR</currency>
+        <field>misc</field>
+        <id>1c12b79e97e6511065dcf8b3f153af75</id>
+        <parent/>
+        <reference_amount>300.69</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-17 15:58:00</sys_created_on>
+        <sys_id>52b2fb9e97e6511065dcf8b3f153afb1</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-10-27 14:42:05</sys_updated_on>
+        <table>question_choice</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="EUR">EUR</currency>
+        <field>rec_misc</field>
+        <id>1c12b79e97e6511065dcf8b3f153af75</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-17 15:58:00</sys_created_on>
+        <sys_id>1ab2fb9e97e6511065dcf8b3f153afb0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-17 15:58:00</sys_updated_on>
+        <table>question_choice</table>
+        <type>calculated</type>
+    </fx_price>
+</record_update>

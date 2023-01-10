@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="zugehoriger_request" label="zugehöriges Requested Item" language="en" table="x_849329_nextlevel_schulungsbuchungen">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>zugehoriger_request</element>
+            <help/>
+            <hint/>
+            <label>zugehöriges Requested Item</label>
+            <language>en</language>
+            <name>x_849329_nextlevel_schulungsbuchungen</name>
+            <plural>zugehöriges Requested Items</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-10-19 13:14:26</sys_created_on>
+            <sys_id>46706107976ed11065dcf8b3f153af42</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>zugehöriges Requested Item</sys_name>
+            <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+            <sys_update_name>sys_documentation_x_849329_nextlevel_schulungsbuchungen_zugehoriger_request_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-10-25 10:32:35</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

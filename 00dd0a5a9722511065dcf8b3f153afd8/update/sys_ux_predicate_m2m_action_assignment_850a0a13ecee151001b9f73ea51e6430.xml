@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_predicate_m2m_action_assignment">
+    <sys_ux_predicate_m2m_action_assignment action="INSERT_OR_UPDATE">
+        <declarative_action_assignment display_value="reject">8d0a0a13c1ee15101cf9b897f9de9b40</declarative_action_assignment>
+        <predicate display_value="My Tasks">8d0a0a1360ee15104e77effc70e6c033</predicate>
+        <sys_class_name>sys_ux_predicate_m2m_action_assignment</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-10-20 10:54:29</sys_created_on>
+        <sys_id>850a0a13ecee151001b9f73ea51e6430</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_update_name>sys_ux_predicate_m2m_action_assignment_850a0a13ecee151001b9f73ea51e6430</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-10-20 10:54:29</sys_updated_on>
+    </sys_ux_predicate_m2m_action_assignment>
+</record_update>

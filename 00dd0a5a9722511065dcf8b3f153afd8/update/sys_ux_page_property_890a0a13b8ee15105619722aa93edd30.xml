@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_page_property">
+    <sys_ux_page_property action="INSERT_OR_UPDATE">
+        <choices/>
+        <description/>
+        <name>chrome_header</name>
+        <page display_value="Next Level Academy">c50a0a1346ee1510a1be962871ff0e2e</page>
+        <required_translations>[]</required_translations>
+        <route display_value="Search Page">0d0a0a13e1ee15107cfbf4cd512c6639</route>
+        <suffix/>
+        <sys_class_name>sys_ux_page_property</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-10-20 10:54:29</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>global</sys_domain_path>
+        <sys_id>890a0a13b8ee15105619722aa93edd30</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>chrome_header</sys_name>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_update_name>sys_ux_page_property_890a0a13b8ee15105619722aa93edd30</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-10-20 10:54:29</sys_updated_on>
+        <type>json</type>
+        <unique_name>x_849329_nextlevel.c50a0a1346ee1510a1be962871ff0e2e.route.chrome_header.0d0a0a13e1ee15107cfbf4cd512c6639</unique_name>
+        <value>{&#13;
+    "privatePage":{&#13;
+       "searchEnabled": false&#13;
+    }&#13;
+}&#13;
+</value>
+    </sys_ux_page_property>
+    <sys_translated_text action="delete_multiple" query="documentkey=890a0a13b8ee15105619722aa93edd30"/>
+</record_update>

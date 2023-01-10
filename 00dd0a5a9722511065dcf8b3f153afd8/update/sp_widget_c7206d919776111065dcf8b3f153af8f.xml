@@ -1,0 +1,808 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function cdContentExperienceController($element, $interval, $scope, $sce, $timeout, $window, i18n, cdAnalytics) {
+	var c = this;
+	var contentsViewed = {};
+	var interval;
+	
+	c.i18n = i18n;
+	c.i18n.loadMessage('play_carousel', 'Play carousel');
+	c.i18n.loadMessage('pause_carousel', 'Pause carousel');
+	c.i18n.loadMessage('scroll_up', 'Scroll up');
+	c.i18n.loadMessage('scroll_down', 'Scroll down');
+	c.itemDisplayCount = 5;
+	c.activeIndex = 0;
+	c.startIndex = 0;
+	c.paused = true;
+	c.forceDots = $element[0].getElementsByClassName('widget-content-experience')[0].clientWidth < 900;
+	c.styledContentSysId = "41040dd7237e2300fb0c949e27bf652a";
+	c.bannerContentSysId = "a673597a0b4303008cd6e7ae37673a6f";
+	
+	c.clickItem = function(index) {
+		c.stopCarousel();
+		c.activeIndex = index;
+		c.selectItem(c.data.items[index]);
+	};
+
+	c.selectItem = function(item) {
+		$scope.$broadcast('closeReadMoreModal');
+		c.activeItem = item;
+		trackImpression(c.activeItem);
+	};
+
+	c.scrollUp = function() {
+		c.stopCarousel();
+		c.activeIndex = c.activeIndex - 1;
+		if (c.activeIndex < 0) {
+			c.activeIndex = c.data.items.length - 1;
+			c.startIndex = c.data.items.length - c.itemDisplayCount;
+		} else if (c.startIndex > c.activeIndex)
+			c.startIndex = c.startIndex - 1;
+		c.selectItem(c.data.items[c.activeIndex]);
+	};
+
+	c.scrollDown = function(autoScroll) {
+		if (!autoScroll)
+			c.stopCarousel();
+		c.activeIndex = c.activeIndex + 1;
+		if (c.activeIndex >= c.data.items.length) {
+			c.activeIndex = 0;
+			c.startIndex = 0;
+		} else if (c.startIndex + c.itemDisplayCount <= c.activeIndex)
+			c.startIndex = c.startIndex + 1;
+		c.selectItem(c.data.items[c.activeIndex]);
+	};
+	
+	c.startCarousel = function() {
+		c.paused = false;
+		interval = $interval(function() {
+			c.scrollDown(true);
+		}, 10000);
+	};
+	
+	c.stopCarousel = function() {
+		c.paused = true;
+		if (interval == null)
+			return;
+		$interval.cancel(interval);
+		interval = null;
+	};
+	
+	c.setLayoutType = function() {
+		var cew = $element[0].getElementsByClassName('widget-content-experience')[0];
+		if (cew && cew.clientWidth < 900){
+			return c.forceDots = true;
+		}
+		switch (c.data.layoutType) {
+			case 'Carousel':
+				c.forceDots = true;
+			break;
+			default:
+				c.forceDots = $element[0].getElementsByClassName('widget-content-experience')[0].clientWidth < 900;
+		}
+	};
+	
+	c.togglePause = function() {
+		if (c.paused)
+			c.startCarousel();
+		else
+			c.stopCarousel();
+	};
+
+	c.getGradient = function() {
+		if (c.activeItem.content_type === c.styledContentSysId && c.activeItem.add_gradient)
+			return 'gradient-' + c.activeItem.text_color;
+	};
+	
+	c.checkForDefectiveBanner = function() {
+		if (c.activeItem.content_type === c.bannerContentSysId && c.activeItem.type==='block') {
+			return c.getExpandedBackground();
+		}
+	};
+	
+	/* Will account for expanded image of banner, video or block */
+	c.getExpandedBackground = function() {
+		c.setLayoutType();
+		if (!c.data.expandBkgdImage) 
+			return;
+		var styles = {};
+		if (c.activeItem.content_type === c.bannerContentSysId && c.activeItem.background_image){
+			styles['background-image'] = 'url(/' + c.activeItem.background_image + ')';
+			styles['background-size'] = c.activeItem.background_size;
+			styles['background-position'] = c.activeItem.background_position.replace('-', ' ');
+			return styles;	
+		}
+		if (c.activeItem.content_type === c.styledContentSysId ) {
+			if (c.activeItem.background_image && c.activeItem.add_background_image)
+				styles['background-image'] = 'url(/' + c.activeItem.background_image + ')';
+			if (c.activeItem.background_position)
+				styles['background-position'] = c.activeItem.background_position.replace('-', ' ');
+			if (c.activeItem.background_size)
+				styles['background-size'] = c.activeItem.background_size;
+			if (c.activeItem.background_color)
+				styles['background-color'] = c.activeItem.background_color;
+			return styles;
+		}
+		return {};
+	};
+
+	c.getGlyphClasses = function (item) {
+		if (c.hasExpandedBackground==='false') {
+			return;
+		}
+		var styles = '';
+		if (c.activeItem.icon && c.activeItem.add_icon) {
+			styles = 'fa fa-' + c.activeItem.icon;
+		}
+		if (c.activeItem.text_alignment) {
+			styles = styles + ' text-alignment-' + c.activeItem.text_alignment;
+		}
+		if (c.activeItem.icon_size && c.activeItem.add_icon) {
+			styles = styles + ' glyph-size-' + c.activeItem.icon_size;
+		}
+		if (c.activeItem.text_color) {
+			styles = styles + ' text-color-' + c.activeItem.text_color;
+		}
+		return styles;
+	};
+
+	
+	c.isBanner = function () {
+		if (c.activeItem)
+			return (c.activeItem.content_type === c.styledContentSysId && c.activeItem.type === 'banner') || c.activeItem.content_type === c.bannerContentSysId;
+	};
+
+	c.getStyle = function() {
+		if (!c.data.expandBkgdImage && c.activeItem.content_type === c.styledContentSysId && 
+			(c.activeItem.type === 'banner' || c.activeItem.type === 'video' || c.activeItem.text_over_background)) {
+			var styles = {};
+			if (c.activeItem.background_image && c.activeItem.add_background_image)
+				styles['background-image'] = 'url(/' + c.activeItem.background_image + ')';
+			if (c.activeItem.background_position)
+				styles['background-position'] = c.activeItem.background_position.replace('-', ' ');
+			if (c.activeItem.background_size)
+				styles['background-size'] = c.activeItem.background_size;
+			if (c.activeItem.background_color)
+				styles['background-color'] = c.activeItem.background_color;
+			return styles;
+		}
+		return {};
+	};
+	
+	c.tooltipEnabled = function(className) {
+		var element = $element[0].getElementsByClassName(className)[0];
+		return element.scrollHeight > element.clientHeight;
+	};
+	
+	$scope.$on('$destroy', function() {
+		c.stopCarousel();
+	});
+	
+	angular.element($window).bind('resize', function(){
+		c.forceDots = $element[0].getElementsByClassName('widget-content-experience')[0].clientWidth < 900;
+		scope.$apply();
+	});
+	
+	function trackImpression(ceItem) {
+		var actionName = ceItem.title + '-' + ceItem.sys_id;
+		
+		// Don't overdo it with logging banner views. Just do it once per page load
+		if (!c.data.isContentPreview && !(actionName in contentsViewed)) {
+			cdAnalytics.trackEvent('Content Experience Impression', ceItem);
+			contentsViewed[actionName] = true;
+		}
+	}
+	
+	function displayItems() {
+		if (c.data && c.data.items && c.data.items.length > 0) {
+			c.selectItem(c.data.items[0]);
+			for (var i=0; i < c.data.items.length; i++){
+				c.data.items[i].html = $sce.trustAsHtml(c.data.items[i].rich_text);
+				c.data.items[i].showPreviewTooltip = (c.data.items[i].url == '') && c.data.isContentPreview;
+				if(c.data.items[i].video_url){
+					c.data.items[i].video_url = $sce.trustAsResourceUrl(c.data.items[i].video_url);
+				}
+			}
+
+			if (c.data.items.length > 1)
+				c.startCarousel();
+		}
+	}
+	var load_config = c.data.load_config;
+	if (load_config === "async") {
+		c.data.action = 'loadData';
+		c.server.update().then(displayItems);
+	} else
+		displayItems();
+}
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>$preview-outline: #005b9d !default;&#13;
+$preview-outline-inactive: #485563 !default;&#13;
+$preview-outline-text-color: #ffffff !default;&#13;
+$list-header: #000;&#13;
+$list-header-active: #000;&#13;
+$list-text: #637274;&#13;
+$list-background: rgba(255, 255, 255, 0.9);&#13;
+$list-item-background: #616161;&#13;
+$list-item-background-active: #fff;&#13;
+$list-arrow-background: #fff; &#13;
+$list-arrow-border: rgba(230, 230, 230, 0.9); &#13;
+$list-border: rgba(255, 255, 255, 0.3); &#13;
+$dots-background-active: rgba(255, 255, 255, 0.9); &#13;
+$dots-border: rgba(135, 144, 161, 0.8); &#13;
+$pause-background: rgba(255, 255, 255, 0.8); &#13;
+$pause-text: #2e2e2e; &#13;
+$arrow-background: rgba(46, 46, 46, 0.8); &#13;
+$arrow-text: rgba(255, 255, 255, 1); &#13;
+$tropical-rain: null !default; &#13;
+ &#13;
+.widget-content-experience { &#13;
+	position: relative; &#13;
+ &#13;
+	&amp;.container-offset { &#13;
+		margin: -10px -15px 22px -15px; &#13;
+	} &#13;
+ &#13;
+	.widget-container { &#13;
+		background-size: cover; &#13;
+		background-repeat: no-repeat; &#13;
+		background-position: center top; &#13;
+		display: flex; &#13;
+		flex-flow: row nowrap; &#13;
+		height: 400px; &#13;
+ &#13;
+		.widget-content { &#13;
+          	background-repeat: no-repeat; &#13;
+			flex: 1 0 0; &#13;
+			position: relative; &#13;
+			.read-less-btn:hover, .read-more-btn:hover { &#13;
+				@if $tropical-rain != null { &#13;
+					color: $tropical-rain; &#13;
+					border-color: $tropical-rain; &#13;
+				} &#13;
+			} &#13;
+			.pause-toggle { &#13;
+				align-items: center; &#13;
+				background: none; &#13;
+				border: none; &#13;
+				border-radius: 50%; &#13;
+				bottom: 16px; &#13;
+				display: flex; &#13;
+				font-size: 40px; &#13;
+				height: 40px; &#13;
+				justify-content: center; &#13;
+				padding: 0; &#13;
+				position: absolute; &#13;
+				right: 6px; &#13;
+				width: 40px; &#13;
+ &#13;
+				.pause-background { &#13;
+					background: $pause-background; &#13;
+					border-radius: 50%; &#13;
+					height: 30px; &#13;
+					margin: auto; &#13;
+					position: absolute; &#13;
+					width: 30px; &#13;
+				} &#13;
+ &#13;
+				.fa { &#13;
+					color: $pause-text; &#13;
+					position: relative; &#13;
+				} &#13;
+			} &#13;
+		} &#13;
+		.block-top-content { &#13;
+			min-height: 150px; &#13;
+		} &#13;
+ &#13;
+		.block-top-content i { &#13;
+			padding: 0; &#13;
+			width: 100%; &#13;
+		} &#13;
+ &#13;
+		.block-top-content { &#13;
+			background-repeat: no-repeat; &#13;
+			width: 100%; &#13;
+			padding: 40px 75px 0; &#13;
+		} &#13;
+		.list { &#13;
+			display: flex; &#13;
+			flex: 0 1 25%; &#13;
+			flex-flow: column nowrap; &#13;
+			height: 100%; &#13;
+			max-width: 500px; &#13;
+			min-width: 250px; &#13;
+			z-index:3; &#13;
+ &#13;
+			.hidden-status { &#13;
+				clip: rect(1px, 1px, 1px, 1px); &#13;
+				height: 1px; &#13;
+				overflow: hidden; &#13;
+				position: absolute; &#13;
+				width: 1px; &#13;
+			} &#13;
+ &#13;
+			ul { &#13;
+				background-color: $list-background; &#13;
+				display: flex; &#13;
+				flex: 1 0 0; &#13;
+				flex-flow: column nowrap; &#13;
+				justify-content: flex-end; &#13;
+				margin: 0; &#13;
+				position: relative; &#13;
+ &#13;
+				li { &#13;
+					align-items: center; &#13;
+					background: none; &#13;
+					border-bottom: 1px solid $list-border; &#13;
+					display: flex; &#13;
+					flex: 1 0 70px; &#13;
+					overflow: hidden; &#13;
+ &#13;
+					&amp;.active { &#13;
+						background-color: $list-item-background-active; &#13;
+						border-radius: 6px 0 0 6px; &#13;
+						box-shadow: 0px 2px 10px 0px rgba(23, 40, 52, 0.08); &#13;
+						flex: 1 0 85px; &#13;
+						margin-left: -15px; &#13;
+ &#13;
+						button.btn-primary { &#13;
+							border-radius: 6px 0 0 6px; &#13;
+						} &#13;
+ &#13;
+						span { &#13;
+							color: $list-header-active; &#13;
+							font-weight: bold; &#13;
+						} &#13;
+					} &#13;
+ &#13;
+					&amp;.ng-animate { &#13;
+						transition: all 0.1s linear; &#13;
+					} &#13;
+ &#13;
+					&amp;.ng-enter, &#13;
+					&amp;.ng-leave.ng-leave-active { &#13;
+						max-height: 0; &#13;
+					} &#13;
+ &#13;
+					&amp;.ng-enter.ng-enter-active, &#13;
+					&amp;.ng-leave { &#13;
+						max-height: 85px; &#13;
+					} &#13;
+ &#13;
+					.btn { &#13;
+						background: none; &#13;
+						height: 100%; &#13;
+						padding: 16px; &#13;
+						text-align: unset; &#13;
+						white-space: initial; &#13;
+						width: 100%; &#13;
+ &#13;
+						span { &#13;
+							color: $list-header; &#13;
+							display: -webkit-box; &#13;
+							font-size: 16px; &#13;
+							line-height: 1.42857143; &#13;
+							margin: 0; &#13;
+							overflow: hidden; &#13;
+							overflow-wrap: anywhere; &#13;
+							-webkit-box-orient: vertical; &#13;
+							-webkit-line-clamp: 2; &#13;
+						} &#13;
+					} &#13;
+				} &#13;
+			} &#13;
+ &#13;
+			.scroll-btns { &#13;
+				background: $list-arrow-background; &#13;
+				box-shadow: 0px 2px 10px 0px rgba(23, 40, 52, 0.08); &#13;
+				display: flex; &#13;
+				flex: 0 0 30px; &#13;
+				justify-content: center; &#13;
+ &#13;
+				.btn { &#13;
+					align-items: center; &#13;
+					background: none; &#13;
+					border: none; &#13;
+					border-radius: 0; &#13;
+					color: $list-text; &#13;
+					display: flex; &#13;
+					flex: 1 0 0; &#13;
+					font-size: 16px; &#13;
+					justify-content: center; &#13;
+					padding: 0 10px; &#13;
+ &#13;
+					&amp;:first-child { &#13;
+						border-right: 1px solid $list-arrow-border; &#13;
+					} &#13;
+				} &#13;
+			} &#13;
+		} &#13;
+ &#13;
+		.nav-arrow { &#13;
+			align-items: center; &#13;
+			background: none; &#13;
+			border: none; &#13;
+			border-radius: 50%; &#13;
+			bottom: 0; &#13;
+			color: $arrow-text; &#13;
+			display: flex; &#13;
+			font-size: 40px; &#13;
+			height: 40px; &#13;
+			justify-content: center; &#13;
+			margin: auto; &#13;
+			padding: 0; &#13;
+			position: absolute; &#13;
+			top: 0; &#13;
+			width: 40px; &#13;
+ &#13;
+			.arrow-background { &#13;
+				background-color: $arrow-background; &#13;
+				border-radius: 50%; &#13;
+				height: 30px; &#13;
+				margin: auto; &#13;
+				position: absolute; &#13;
+				width: 30px; &#13;
+			} &#13;
+ &#13;
+			.fa { &#13;
+				position: relative; &#13;
+			} &#13;
+		} &#13;
+ &#13;
+		.left-arrow { &#13;
+			left: 6px; &#13;
+		} &#13;
+ &#13;
+		.right-arrow { &#13;
+			right: 6px; &#13;
+		} &#13;
+ &#13;
+		.dots { &#13;
+			bottom: 0; &#13;
+			left: 50%; &#13;
+			position: absolute; &#13;
+ &#13;
+			ul { &#13;
+				display: flex; &#13;
+				flex-flow: row nowrap; &#13;
+				left: -50%; &#13;
+				margin: 0; &#13;
+				position: relative; &#13;
+ &#13;
+				li { &#13;
+					padding: 8px 6px; &#13;
+ &#13;
+					.dot { &#13;
+						background: none; &#13;
+						border: 1px solid $dots-border; &#13;
+						border-radius: 50%; &#13;
+						display: block; &#13;
+						height: 10px; &#13;
+						padding: 0; &#13;
+						width: 10px; &#13;
+ &#13;
+						&amp;.active { &#13;
+							background: $dots-background-active; &#13;
+							border-color: $dots-background-active; &#13;
+						} &#13;
+					} &#13;
+				} &#13;
+			} &#13;
+		} &#13;
+	} &#13;
+ &#13;
+	/* Remove heading text while remaining WCAG-compliant */ &#13;
+	&amp;:not(.show-heading) { &#13;
+		.panel { &#13;
+			.panel-heading { &#13;
+				position: absolute; &#13;
+				left: -9999px; &#13;
+				top: -9999px; &#13;
+			} &#13;
+ &#13;
+			.panel { &#13;
+				.panel-heading { &#13;
+					position: relative; &#13;
+					left: inherit; &#13;
+					top: inherit; &#13;
+				} &#13;
+			} &#13;
+		} &#13;
+	} &#13;
+	&amp;:not(.show-background) { &#13;
+		.panel, .panel-heading { &#13;
+			background: none !important; &#13;
+			border: none !important; &#13;
+			box-shadow: none !important; &#13;
+			margin-bottom: 0 !important; &#13;
+		} &#13;
+	} &#13;
+ &#13;
+	/* Remove bounding box style for outermost panel */ &#13;
+	&amp;:not(.show-bounding-box) { &#13;
+		.panel { &#13;
+			border-color: transparent; &#13;
+			border-radius: 0; &#13;
+			box-shadow: none; &#13;
+			.panel { &#13;
+				border-color: $color-lighter; &#13;
+			} &#13;
+		} &#13;
+	} &#13;
+ &#13;
+	.panel-body { &#13;
+		padding: 0; &#13;
+	} &#13;
+} &#13;
+ &#13;
+.widget-content-experience-mobile { &#13;
+	margin: -10px -15px 30px -15px !important; &#13;
+	border-bottom: 12px solid #f6f7f7; &#13;
+	.widget-swipe-container { &#13;
+		position: absolute; &#13;
+		height: -webkit-fill-available; &#13;
+		width: -webkit-fill-available; &#13;
+	} &#13;
+	.widget-container { &#13;
+		margin-top: 0 !important; &#13;
+		height: 212px !important; &#13;
+		.dots { &#13;
+			bottom: 3px !important; &#13;
+			li { &#13;
+				padding: 8px 2px !important; &#13;
+			} &#13;
+			.dot { &#13;
+				background: #e4e6e7 !important; &#13;
+				border-color: #e4e6e7 !important; &#13;
+				width: 6px !important; &#13;
+				height: 6px !important; &#13;
+				&amp;.btn.active { &#13;
+					background: #637274 !important; &#13;
+					border-color: #637274 !important; &#13;
+				} &#13;
+			} &#13;
+		} &#13;
+		.nav-arrow { &#13;
+			bottom: 40px !important; &#13;
+		} &#13;
+		.pause-toggle { &#13;
+			bottom: 10px !important; &#13;
+		} &#13;
+	} &#13;
+	.widget-container-spacing-mobile { &#13;
+		height: 35px; &#13;
+	} &#13;
+} &#13;
+ &#13;
+@media (min-width: 768px) { &#13;
+	.widget-content-experience { &#13;
+		.widget-container { &#13;
+			.right-arrow { &#13;
+				right: 23px; &#13;
+			} &#13;
+			.left-arrow { &#13;
+				left: 23px; &#13;
+			} &#13;
+		} &#13;
+	} &#13;
+} &#13;
+ &#13;
+@media (min-width: 992px) { &#13;
+	.widget-content-experience { &#13;
+		.widget-container { &#13;
+			.widget-content { &#13;
+				.pause-toggle { &#13;
+					right: 20px; &#13;
+				} &#13;
+			} &#13;
+		} &#13;
+	} &#13;
+} &#13;
+ &#13;
+.preview-outline { &#13;
+	border: 3px solid $preview-outline; &#13;
+} &#13;
+ &#13;
+.preview-info-tab { &#13;
+	background-color: $preview-outline; &#13;
+} &#13;
+ &#13;
+.preview-info-container-compact { &#13;
+	background-color: $preview-outline; &#13;
+} &#13;
+ &#13;
+.preview-info-tab-compact { &#13;
+	background-color: $preview-outline; &#13;
+} &#13;
+ &#13;
+.preview-info-popup { &#13;
+	color: $preview-outline-text-color; &#13;
+} &#13;
+ &#13;
+.preview-info-tab-text { &#13;
+	color: $preview-outline-text-color; &#13;
+} &#13;
+ &#13;
+.preview-outline-inactive { &#13;
+	border: 3px solid $preview-outline-inactive; &#13;
+ &#13;
+	.preview-info-tab { &#13;
+		background-color: $preview-outline-inactive; &#13;
+	} &#13;
+ &#13;
+	.preview-info-container-compact { &#13;
+		background-color: $preview-outline-inactive; &#13;
+	} &#13;
+ &#13;
+	.preview-info-tab-compact { &#13;
+		background-color: $preview-outline-inactive; &#13;
+	} &#13;
+} &#13;
+ &#13;
+@media(max-width:375px) { &#13;
+  .widget-content-experience { &#13;
+    .widget-container { &#13;
+      .right-arrow{ &#13;
+        display: none; &#13;
+      } &#13;
+      .left-arrow{ &#13;
+        display: none; &#13;
+      } &#13;
+    } &#13;
+  } &#13;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description>Displays portal content with different content types in a configurable layout.</description>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function cdContentExperienceLink(scope, element, attrs, c) {
+// 	c.$contentExperience = jQuery(element[0]);
+
+// 	c.$contentExperience.bind('keyup', function(e) {
+// 		if (e.keyCode === 13) {
+// 			var $focusedIndicator = c.$contentExperience.find('.carousel-indicator:focus');
+// 			var $targetedTabpanel = c.$contentExperience.find("#" + $focusedIndicator.attr('aria-controls'));
+// 			var $currentTargedTabpanel = c.$contentExperience.find('[tabindex="-1"]');
+
+// 			if ($currentTargedTabpanel)
+// 				$currentTargedTabpanel.attr('tabindex', 0);
+
+// 			$focusedIndicator.trigger('click');
+// 			$targetedTabpanel.attr('tabindex', -1);
+// 		}
+// 	});
+}]]></link>
+        <name>Copy of Content Experience</name>
+        <option_schema>[{"name":"displayHeadingText","section":"other","default_value":"false","label":"Display heading text","type":"boolean"},
+{"name":"displayBoundingBox","section":"other","default_value":"false","label":"Display bounding box","type":"boolean"},
+{"name":"showBackground","section":"other","default_value":"false","label":"Display widget background color","type":"boolean"},
+{"hint":"Pick type of layout to display content","name":"layoutTypes","section":"Layout Types","default_value":"List","label":"Widget Style (Applies only to Desktop)","type":"choice","choices":[{"label":"Right-hand list menu (default)","value":"List"},{"label":"Dotted carousel","value":"Carousel"}]},
+{"name":"expandBkgdImage","section":"Layout Types","default_value":"false","label":"Allow background image to be partially covered by Right-hand list menu","type":"boolean"},
+{"name":"load_config","section":"other","default_value":"async","label":"Load configuration","type":"choice","choices":[{"label":"Synchronous","value":"sync"},{"label":"Asynchronous","value":"async"}]}]
+</option_schema>
+        <public>false</public>
+        <roles>snc_internal,sn_asc.alumni</roles>
+        <script><![CDATA[(function () {
+	data.load_config = options.load_config;
+	if (data.load_config === "async" && (!input || input.action !== "loadData"))
+		return;
+
+	var grInstanceRecord = $sp.getInstanceRecord();
+	data.spInstanceId = grInstanceRecord.getUniqueValue();
+	data.spInstanceTitle = grInstanceRecord.getDisplayValue('title');
+	data.disabledTooltip = gs.getMessage("This action is disabled and is in preview mode only");
+	data.isMobileApp = $sp.getParameter('view') === 'mobile';
+
+	data.isContentPreview = cd_ContentDelivery.isContentPreview($sp);
+	data.items = cd_ContentDelivery.getContent($sp, data.spInstanceId);
+
+	data.items.forEach(function (item) {
+		var additionalDetails = [{
+			label: gs.getMessage('Portal Content'),
+			value: 'Portal Content Experience'
+		}];
+
+		cd_ContentDelivery.setInfoObjectOnContentItem(item, additionalDetails);
+	});
+
+	// Get options from sp instance to hide/show heading text
+	data.displayHeadingText = options.displayHeadingText == 'true';
+	// Get options from sp instance to hide/show bounding box style
+	data.displayBoundingBox = options.displayBoundingBox == 'true';
+	// Get options from sp instance to hide/show the background
+	data.showBackground = options.showBackground == 'true';
+	// Get options from sp instance to get layout types
+	data.layoutType = options.layoutTypes;
+	// Get options from sp instance to expand background image
+	data.expandBkgdImage = options.expandBkgdImage == 'true';
+
+	data.messages = {
+		'indicatorLabel': gs.getMessage('{0}: Slide {1}'), //{0} is the spInstance title, {0} is a number, e.g. 1
+		'carouselButtonLabel': gs.getMessage('Carousel button')
+	};
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-26 12:59:28</sys_created_on>
+        <sys_id>c7206d919776111065dcf8b3f153af8f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Copy of Content Experience</sys_name>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_update_name>sp_widget_c7206d919776111065dcf8b3f153af8f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-26 12:59:28</sys_updated_on>
+        <template><![CDATA[<section class="widget-content-experience" ng-class="{ 'widget-content-experience-mobile': data.isMobileApp, 'container-offset': c.isBanner(), 'show-heading': c.data.displayHeadingText, 'show-bounding-box': c.data.displayBoundingBox, 'show-background': c.data.showBackground }">
+	<sp-panel rect="rect" ng-if="c.data.items.length">
+		<div class="widget-container" ng-class="{'carousel-layout' : c.forceDots}" ng-if="c.data.items.length > 0" ng-style="c.activeItem.type==='block' && !c.activeItem.text_over_background? c.checkForDefectiveBanner() : c.getExpandedBackground()" ng-swipe-left="c.data.items.length > 1 && data.isMobileApp ? c.scrollDown() : ''" ng-swipe-right="c.data.items.length > 1 && data.isMobileApp ? c.scrollUp() : ''">
+      			<div
+				class="widget-content"
+				ng-class="[c.getGradient(), {mobile: c.data.items.length >= 1 && c.forceDots}, {'preview-outline preview-info-container-parent': c.activeItem.is_preview && c.activeItem.is_content_active === '1'}, {'preview-outline-inactive preview-info-container-parent': c.activeItem.is_preview && c.activeItem.is_content_active === '0'}]"
+				ng-style="c.getStyle()" ng-switch="c.activeItem.content_type"             
+			>
+				<portal-content-preview-info-tab is-compact="false" item="c.activeItem" index="1">
+				</portal-content-preview-info-tab>
+				<cd-banner ng-switch-when="a673597a0b4303008cd6e7ae37673a6f" banner-item="c.activeItem" index="1" is-content-preview="c.data.isContentPreview" disabled-tooltip="c.data.disabledTooltip" has-expanded-background="c.data.expandBkgdImage" ></cd-banner>
+				<cd-styled-content ng-switch-when="41040dd7237e2300fb0c949e27bf652a" styled-content-item="c.activeItem" index="1" 
+                                     is-content-preview="c.data.isContentPreview" 
+                                     disabled-tooltip="c.data.disabledTooltip"  
+                                     has-expanded-background="c.data.expandBkgdImage"
+                                     active-item="c.activeItem">
+				</cd-styled-content>
+				<button class="pause-toggle btn btn-primary" ng-click="c.togglePause()" ng-if="c.data.items.length > 1 && !data.isMobileApp" aria-label="{{c.paused ? 'Play' : 'Pause'}}">
+						<div class="pause-background"></div>
+						<span class="fa fa-pause-circle-o" role="button" ng-if="!c.paused" uib-tooltip="{{c.i18n.getMessage('pause_carousel')}}" aria-label="{{c.i18n.getMessage('pause_carousel')}}"></span>
+						<span class="fa fa-play-circle-o" role="button" ng-if="c.paused" uib-tooltip="{{c.i18n.getMessage('play_carousel')}}" aria-label="{{c.i18n.getMessage('play_carousel')}}"></span>
+				</button>
+			</div>
+
+			<div class="list" ng-if="c.data.items.length > 1 && !c.forceDots">
+				<div class="hidden-status" aria-live="polite">Banner {{c.activeIndex + 1}} of {{c.data.items.length}}: {{c.activeItem.heading_text}}</div>
+				<ul class="list-unstyled">
+					<li ng-repeat="ceItem in c.data.items | limitTo : c.itemDisplayCount : c.startIndex" ng-class="{ active: c.activeItem.sys_id === ceItem.sys_id }" class="widget-content-experience-content-btn">
+						<button class="btn btn-primary" ng-click="c.clickItem($index + c.startIndex)" aria-label="{{c.data.messages.carouselButtonLabel + ' ' + $index}}">
+							<span class="{{'heading' + $index}}" uib-tooltip="{{ceItem.heading_text}}" tooltip-class="tooltip-overflow" tooltip-enable="c.tooltipEnabled('heading' + $index)" tooltip-append-to-body="true">{{ ::ceItem.heading_text }}</span>
+						</button>
+					</li>
+				</ul>
+				<div class="scroll-btns" ng-if="c.data.items.length > c.itemDisplayCount">
+					<button class="btn btn-primary" ng-click="c.scrollUp()" aria-label="${Scroll up}" uib-tooltip="{{c.i18n.getMessage('scroll_up')}}">
+						<span class="fa fa-chevron-up"></span>
+					</button>
+					<button class="btn btn-primary" ng-click="c.scrollDown()" aria-label="${Scroll down}" uib-tooltip="{{c.i18n.getMessage('scroll_down')}}">
+						<span class="fa fa-chevron-down"></span>
+					</button>
+				</div>
+			</div>
+			<button class="nav-arrow left-arrow btn" ng-click="c.scrollUp()" ng-if="c.data.items.length > 1 && c.forceDots && !data.isMobileApp" aria-label="${Previous item}">
+				<div class="arrow-background"></div>
+				<span class="fa fa-chevron-circle-left"></span>
+			</button>
+			<button class="nav-arrow right-arrow btn" ng-click="c.scrollDown()" ng-if="c.data.items.length > 1 && c.forceDots&& !data.isMobileApp" aria-label="${Next item}">
+				<div class="arrow-background"></div>
+				<span class="fa fa-chevron-circle-right"></span>
+			</button>
+			<div class="dots" ng-if="c.data.items.length > 1 && c.forceDots">
+				<ul class="list-unstyled">
+					<li ng-repeat="ceItem in c.data.items">
+						<button class="dot btn" ng-click="c.clickItem($index)" ng-class="{ active: c.activeItem.sys_id === ceItem.sys_id }" aria-label="{{ceItem.heading_text? ceItem.heading_text : 'Carousel dot' }}"></button>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="widget-container-spacing-mobile" ng-if="c.data.items.length > 1 && c.forceDots && data.isMobileApp"></div>
+	</sp-panel>
+</section>
+]]></template>
+    </sp_widget>
+</record_update>

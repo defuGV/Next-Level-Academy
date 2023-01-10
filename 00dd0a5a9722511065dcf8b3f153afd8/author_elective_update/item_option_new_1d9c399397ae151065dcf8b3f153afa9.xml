@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new">
+    <item_option_new action="DELETE">
+        <active>true</active>
+        <attributes/>
+        <cat_item display_value="Zertifizierung zur  Management Assistenz">519cf15397ae151065dcf8b3f153afee</cat_item>
+        <category/>
+        <choice_direction>down</choice_direction>
+        <choice_field/>
+        <choice_table/>
+        <create_roles/>
+        <default_html_value/>
+        <default_value/>
+        <delete_roles/>
+        <delivery_plan/>
+        <description/>
+        <display_title>false</display_title>
+        <do_not_select_first>false</do_not_select_first>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <enable_also_request_for>false</enable_also_request_for>
+        <example_text/>
+        <field/>
+        <global>false</global>
+        <help_tag>More information</help_tag>
+        <help_text/>
+        <hidden>true</hidden>
+        <include_none>false</include_none>
+        <instructions/>
+        <layout>normal</layout>
+        <list_table/>
+        <lookup_label/>
+        <lookup_price/>
+        <lookup_table>x_849329_nextlevel_schulung</lookup_table>
+        <lookup_unique>false</lookup_unique>
+        <lookup_value>startdatum</lookup_value>
+        <macro/>
+        <macroponent/>
+        <mandatory>false</mandatory>
+        <map_to_field>false</map_to_field>
+        <mask_use_confirmation>false</mask_use_confirmation>
+        <mask_use_encryption>false</mask_use_encryption>
+        <name>startdatum_hybrid</name>
+        <order>300</order>
+        <price_if_checked>0</price_if_checked>
+        <pricing_implications>false</pricing_implications>
+        <published_ref display_value="Verfügbare Starttermine für die Schulung  Online + Finalwoche in Präsenz">72e47dd7976e151065dcf8b3f153af53</published_ref>
+        <question_text>Verfügbare Starttermine für die Schulung  Online + Finalwoche in Präsenz</question_text>
+        <read_only>false</read_only>
+        <read_roles/>
+        <read_script/>
+        <rec_lookup_price/>
+        <rec_price_if_checked>0</rec_price_if_checked>
+        <record/>
+        <record_producer_table/>
+        <reference/>
+        <reference_qual>programm.u_name=Microsoft Office 365^mit_prasenz=true^kurs_buchbar=true</reference_qual>
+        <reference_qual_condition/>
+        <rich_text/>
+        <roles_to_use_also_request_for/>
+        <save_script/>
+        <scale_max>5</scale_max>
+        <scale_min>0</scale_min>
+        <show_help>false</show_help>
+        <show_help_on_load>false</show_help_on_load>
+        <sp_widget/>
+        <summary_macro/>
+        <sys_class_name>item_option_new</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-20 09:55:45</sys_created_on>
+        <sys_id>1d9c399397ae151065dcf8b3f153afa9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Verfügbare Starttermine für die Schulung  Online + Finalwoche in Präsenz</sys_name>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_update_name>item_option_new_1d9c399397ae151065dcf8b3f153afa9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-20 09:55:45</sys_updated_on>
+        <table/>
+        <tooltip/>
+        <type>18</type>
+        <ui_page/>
+        <unique>false</unique>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>advanced</use_reference_qualifier>
+        <validate_regex/>
+        <variable_name/>
+        <variable_set/>
+        <variable_width/>
+        <visibility>1</visibility>
+        <visible_bundle>true</visible_bundle>
+        <visible_guide>true</visible_guide>
+        <visible_standalone>true</visible_standalone>
+        <visible_summary>true</visible_summary>
+        <write_roles/>
+    </item_option_new>
+    <sys_translated_text action="DELETE" query="documentkey=1d9c399397ae151065dcf8b3f153afa9"/>
+    <fx_price action="DELETE" query="id=1d9c399397ae151065dcf8b3f153afa9"/>
+    <fx_price action="DELETE">
+        <amount>0</amount>
+        <currency display_value="EUR">EUR</currency>
+        <field>price_if_checked</field>
+        <id>1d9c399397ae151065dcf8b3f153afa9</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-20 09:55:45</sys_created_on>
+        <sys_id>5d9c399397ae151065dcf8b3f153afac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-20 09:55:45</sys_updated_on>
+        <table>item_option_new</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="DELETE">
+        <amount>0</amount>
+        <currency display_value="EUR">EUR</currency>
+        <field>rec_price_if_checked</field>
+        <id>1d9c399397ae151065dcf8b3f153afa9</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-20 09:55:45</sys_created_on>
+        <sys_id>119c399397ae151065dcf8b3f153afac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-20 09:55:45</sys_updated_on>
+        <table>item_option_new</table>
+        <type>calculated</type>
+    </fx_price>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</application>
+        <file_path/>
+        <instance_id>7bfca7911b8505507d9d2f8dee4bcbcc</instance_id>
+        <instance_name>dev121067</instance_name>
+        <name>item_option_new_1d9c399397ae151065dcf8b3f153afa9</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new"><item_option_new action="INSERT_OR_UPDATE"><active>true</active><attributes/><cat_item display_value="Zertifizierung zur  Management Assistenz">519cf15397ae151065dcf8b3f153afee</cat_item><category/><choice_direction>down</choice_direction><choice_field/><choice_table/><create_roles/><default_html_value/><default_value/><delete_roles/><delivery_plan/><description/><display_title>false</display_title><do_not_select_first>false</do_not_select_first><dynamic_default_value/><dynamic_ref_qual/><enable_also_request_for>false</enable_also_request_for><example_text/><field/><global>false</global><help_tag>More information</help_tag><help_text/><hidden>true</hidden><include_none>false</include_none><instructions/><layout>normal</layout><list_table/><lookup_label/><lookup_price/><lookup_table>x_849329_nextlevel_schulung</lookup_table><lookup_unique>false</lookup_unique><lookup_value>startdatum</lookup_value><macro/><macroponent/><mandatory>false</mandatory><map_to_field>false</map_to_field><mask_use_confirmation>false</mask_use_confirmation><mask_use_encryption>false</mask_use_encryption><name>startdatum_hybrid</name><order>300</order><price_if_checked>0</price_if_checked><pricing_implications>false</pricing_implications><published_ref display_value="Verfügbare Starttermine für die Schulung  Online + Finalwoche in Präsenz">72e47dd7976e151065dcf8b3f153af53</published_ref><question_text>Verfügbare Starttermine für die Schulung  Online + Finalwoche in Präsenz</question_text><read_only>false</read_only><read_roles/><read_script/><rec_lookup_price/><rec_price_if_checked>0</rec_price_if_checked><record/><record_producer_table/><reference/><reference_qual>programm.u_name=Microsoft Office 365^mit_prasenz=true^kurs_buchbar=true</reference_qual><reference_qual_condition/><rich_text/><roles_to_use_also_request_for/><save_script/><scale_max>5</scale_max><scale_min>0</scale_min><show_help>false</show_help><show_help_on_load>false</show_help_on_load><sp_widget/><summary_macro/><sys_class_name>item_option_new</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-10-20 09:55:45</sys_created_on><sys_id>1d9c399397ae151065dcf8b3f153afa9</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Verfügbare Starttermine für die Schulung  Online + Finalwoche in Präsenz</sys_name><sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package><sys_policy/><sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope><sys_update_name>item_option_new_1d9c399397ae151065dcf8b3f153afa9</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-10-20 09:55:45</sys_updated_on><table/><tooltip/><type>18</type><ui_page/><unique>false</unique><use_dynamic_default>false</use_dynamic_default><use_reference_qualifier>advanced</use_reference_qualifier><validate_regex/><variable_name/><variable_set/><variable_width/><visibility>1</visibility><visible_bundle>true</visible_bundle><visible_guide>true</visible_guide><visible_standalone>true</visible_standalone><visible_summary>true</visible_summary><write_roles/></item_option_new><sys_translated_text action="delete_multiple" query="documentkey=1d9c399397ae151065dcf8b3f153afa9"/><fx_price action="delete_multiple" query="id=1d9c399397ae151065dcf8b3f153afa9"/><fx_price action="INSERT_OR_UPDATE"><amount>0</amount><currency display_value="EUR">EUR</currency><field>price_if_checked</field><id>1d9c399397ae151065dcf8b3f153afa9</id><parent/><reference_amount>0</reference_amount><reference_currency display_value="USD">USD</reference_currency><sys_created_by>admin</sys_created_by><sys_created_on>2022-10-20 09:55:45</sys_created_on><sys_id>5d9c399397ae151065dcf8b3f153afac</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-10-20 09:55:45</sys_updated_on><table>item_option_new</table><type>calculated</type></fx_price><fx_price action="INSERT_OR_UPDATE"><amount>0</amount><currency display_value="EUR">EUR</currency><field>rec_price_if_checked</field><id>1d9c399397ae151065dcf8b3f153afa9</id><parent/><reference_amount>0</reference_amount><reference_currency display_value="USD">USD</reference_currency><sys_created_by>admin</sys_created_by><sys_created_on>2022-10-20 09:55:45</sys_created_on><sys_id>119c399397ae151065dcf8b3f153afac</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-10-20 09:55:45</sys_updated_on><table>item_option_new</table><type>calculated</type></fx_price></record_update>]]></payload>
+        <payload_hash>641182877</payload_hash>
+        <record_name>Verfügbare Starttermine für die Schulung  Online + Finalwoche in Präsenz</record_name>
+        <reverted_from/>
+        <source>50dd4e529762511065dcf8b3f153aff8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-20 09:55:45</sys_created_on>
+        <sys_id>559c399397ae151065dcf8b3f153afb1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183f4d1fc320000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-20 09:55:45</sys_updated_on>
+        <type>Variable</type>
+        <update_guid>d99c399388ae1510c4ea7e7921f4a0b0</update_guid>
+        <update_guid_history>d99c399388ae1510c4ea7e7921f4a0b0:641182877</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Verfügbare Starttermine für die Schulung  Online + Finalwoche in Präsenz">92ec71d397ae151065dcf8b3f153af47</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-10-20 09:57:11</sys_created_on>
+        <sys_db_object display_value="" name="item_option_new">item_option_new</sys_db_object>
+        <sys_id>a884abda005c4b78b40d5d655111b890</sys_id>
+        <sys_metadata>1d9c399397ae151065dcf8b3f153afa9</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Verfügbare Starttermine für die Schulung  Online + Finalwoche in Präsenz</sys_name>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_parent display_value="">519cf15397ae151065dcf8b3f153afee</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_scope_delete display_value="">2e7aa6f7de234a9598a3fcc461402aa1</sys_scope_delete>
+        <sys_update_name>item_option_new_1d9c399397ae151065dcf8b3f153afa9</sys_update_name>
+        <sys_update_version display_value="item_option_new_1d9c399397ae151065dcf8b3f153afa9">559c399397ae151065dcf8b3f153afb1</sys_update_version>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-10-20 09:57:11</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

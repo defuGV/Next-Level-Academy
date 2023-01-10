@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Schulungen" max_length="40" name="x_849329_nextlevel_schulung" sizeclass="29" type="collection">
+        <element label="Aktiv" max_length="40" name="aktiv" type="boolean"/>
+        <element label="Enddatum" max_length="40" name="enddatum" type="glide_date"/>
+        <element choice="1" label="Kursstatus" max_length="40" name="kursstatus" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="1 - in Vorbereitung" value="1"/>
+                <element inactive_on_update="false" label="2 - in der Durchführung" value="2"/>
+                <element inactive_on_update="false" label="3 - beendet" value="3"/>
+                <element inactive_on_update="false" label="4 - deaktiviert" value="4"/>
+            </choice>
+        </element>
+        <element default="true" label="Kurs buchbar" max_length="40" name="kurs_buchbar" type="boolean"/>
+        <element label="mit Präsenz" max_length="40" name="mit_prasenz" type="boolean"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Programm" max_length="32" name="programm" reference="x_849329_nextlevel_programm" type="reference"/>
+        <element label="Schulung" max_length="60" name="schulung" type="string_full_utf8"/>
+        <element label="Skill Check durchgeführt" max_length="40" name="skill_check_durchgefuhrt" type="boolean"/>
+        <element label="Skill Check Score Schnitt" max_length="40" name="skill_check_score_schnitt" type="integer"/>
+        <element label="Startdatum" max_length="40" name="startdatum" type="glide_date"/>
+        <element label="Teilnehmerzahl" max_length="40" name="teilnehmerzahl" type="integer"/>
+        <element label="Zertifikat Bestehensquote" max_length="40" name="zertifikat_bestehensquote" type="integer"/>
+        <element label="Zertifikat geprüft" max_length="40" name="zertifikat_gepruft" type="boolean"/>
+        <index name="index">
+            <element name="programm"/>
+        </index>
+    </element>
+</database>

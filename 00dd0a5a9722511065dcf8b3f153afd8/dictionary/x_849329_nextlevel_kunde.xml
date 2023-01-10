@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Kunden" max_length="40" name="x_849329_nextlevel_kunde" sizeclass="3" type="collection">
+        <element label="Adresse" max_length="255" name="adresse" type="string_full_utf8"/>
+        <element label="Ansprechpartner" max_length="40" name="ansprechpartner" type="string"/>
+        <element label="Email" max_length="40" name="email" type="string"/>
+        <element label="Name" max_length="255" name="name" type="string_full_utf8"/>
+        <element label="User" max_length="32" name="user" reference="sys_user" type="reference"/>
+        <element label="Zahlungsdaten" max_length="32" name="zahlungsdaten" reference="x_849329_nextlevel_zahlungsdaten" type="reference"/>
+        <index name="index">
+            <element name="zahlungsdaten"/>
+        </index>
+        <index name="index2">
+            <element name="user"/>
+        </index>
+    </element>
+</database>

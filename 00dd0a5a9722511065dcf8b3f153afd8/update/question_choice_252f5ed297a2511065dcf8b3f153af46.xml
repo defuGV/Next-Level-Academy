@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="INSERT_OR_UPDATE">
+        <inactive>false</inactive>
+        <misc>1000</misc>
+        <order>200</order>
+        <published_ref/>
+        <question display_value="Soll die Graduation Week in Präsenz stattfinden? (es entstehen Zusatzkosten)">8608561e9762511065dcf8b3f153af05</question>
+        <rec_misc>0</rec_misc>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-27 14:31:42</sys_created_on>
+        <sys_id>252f5ed297a2511065dcf8b3f153af46</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Ja</sys_name>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_update_name>question_choice_252f5ed297a2511065dcf8b3f153af46</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-10-27 14:42:06</sys_updated_on>
+        <text>Ja</text>
+        <value>ja</value>
+    </question_choice>
+    <fx_price action="delete_multiple" query="id=252f5ed297a2511065dcf8b3f153af46"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>1000</amount>
+        <currency display_value="EUR">EUR</currency>
+        <field>misc</field>
+        <id>252f5ed297a2511065dcf8b3f153af46</id>
+        <parent/>
+        <reference_amount>1002.3</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-17 09:53:51</sys_created_on>
+        <sys_id>946f921697a2511065dcf8b3f153afb2</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-10-27 14:42:06</sys_updated_on>
+        <table>question_choice</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="EUR">EUR</currency>
+        <field>rec_misc</field>
+        <id>252f5ed297a2511065dcf8b3f153af46</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-17 09:53:51</sys_created_on>
+        <sys_id>586f921697a2511065dcf8b3f153afb1</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-17 10:27:53</sys_updated_on>
+        <table>question_choice</table>
+        <type>calculated</type>
+    </fx_price>
+</record_update>

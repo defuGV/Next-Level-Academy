@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Schulungsbuchungen" max_length="40" name="x_849329_nextlevel_schulungsbuchungen" sizeclass="17" type="collection">
+        <element label="Kunde" max_length="32" name="kunde" reference="x_849329_nextlevel_kunde" type="reference"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Preis (Euro)" max_length="40" name="preis_euro" type="string"/>
+        <element label="Programm" max_length="255" name="programm" type="string_full_utf8"/>
+        <element label="Schulung" max_length="32" name="schulung" reference="x_849329_nextlevel_schulung" type="reference"/>
+        <element label="Start" max_length="40" name="start" type="glide_date"/>
+        <element label="Startdatum" max_length="40" name="startdatum" type="string"/>
+        <element label="Summe netto" max_length="20" name="summe_netto" type="currency"/>
+        <element label="Teilnehmeranzahl" max_length="40" name="teilnehmeranzahl" type="integer"/>
+        <element label="zugehöriges Requested Item" max_length="32" name="zugehoriger_request" reference="sc_req_item" type="reference"/>
+        <element label="Zusatzangebote" max_length="255" name="zusatzangebote" type="string_full_utf8"/>
+        <index name="index">
+            <element name="zugehoriger_request"/>
+        </index>
+        <index name="index2">
+            <element name="schulung"/>
+        </index>
+        <index name="index3">
+            <element name="kunde"/>
+        </index>
+    </element>
+</database>

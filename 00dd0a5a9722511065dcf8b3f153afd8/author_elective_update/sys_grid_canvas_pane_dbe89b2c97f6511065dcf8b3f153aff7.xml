@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_grid_canvas_pane">
+    <sys_grid_canvas_pane action="DELETE">
+        <grid_canvas display_value="PA Next Level Academy - New Tab">6d4f425b97ee151065dcf8b3f153afe3</grid_canvas>
+        <height>14</height>
+        <portal_widget display_value="Created 24.10.2022 15:51:37">5fe85fe897f6511065dcf8b3f153afe6</portal_widget>
+        <posx>4</posx>
+        <posy>0</posy>
+        <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+        <sys_created_by>pelin.yaman</sys_created_by>
+        <sys_created_on>2022-10-24 13:51:37</sys_created_on>
+        <sys_id>dbe89b2c97f6511065dcf8b3f153aff7</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>6d4f425b97ee151065dcf8b3f153afe3</sys_name>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_update_name>sys_grid_canvas_pane_dbe89b2c97f6511065dcf8b3f153aff7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-26 10:43:05</sys_updated_on>
+        <width>4</width>
+    </sys_grid_canvas_pane>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</application>
+        <file_path/>
+        <instance_id>7bfca7911b8505507d9d2f8dee4bcbcc</instance_id>
+        <instance_name>dev121067</instance_name>
+        <name>sys_grid_canvas_pane_dbe89b2c97f6511065dcf8b3f153aff7</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_grid_canvas_pane"><sys_grid_canvas_pane action="INSERT_OR_UPDATE"><grid_canvas display_value="PA Next Level Academy - New Tab">6d4f425b97ee151065dcf8b3f153afe3</grid_canvas><height>14</height><portal_widget display_value="Created 24.10.2022 15:51:37">5fe85fe897f6511065dcf8b3f153afe6</portal_widget><posx>4</posx><posy>0</posy><sys_class_name>sys_grid_canvas_pane</sys_class_name><sys_created_by>pelin.yaman</sys_created_by><sys_created_on>2022-10-24 13:51:37</sys_created_on><sys_id>dbe89b2c97f6511065dcf8b3f153aff7</sys_id><sys_mod_count>9</sys_mod_count><sys_name>6d4f425b97ee151065dcf8b3f153afe3</sys_name><sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package><sys_policy/><sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope><sys_update_name>sys_grid_canvas_pane_dbe89b2c97f6511065dcf8b3f153aff7</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-10-26 10:43:05</sys_updated_on><width>4</width></sys_grid_canvas_pane></record_update>]]></payload>
+        <payload_hash>-1575156928</payload_hash>
+        <record_name>6d4f425b97ee151065dcf8b3f153afe3</record_name>
+        <reverted_from/>
+        <source>50dd4e529762511065dcf8b3f153aff8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-26 10:43:05</sys_created_on>
+        <sys_id>8df0c11197f2111065dcf8b3f153af70</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18413e3778e0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-26 10:43:05</sys_updated_on>
+        <type>Grid Canvas Pane</type>
+        <update_guid>45f0c11194f21110a70f9f151aa8da70</update_guid>
+        <update_guid_history>45f0c11194f21110a70f9f151aa8da70:-1575156928,53e0451143f2111073eb10d65fba7144:-703761967,37a0011164f2111007c4b8515fa81ac2:-1575156928,cea001119bf211105f09662c1e2c1450:-1878511172,55a0cddd39b21110c2275c315888c2f1:-1575156928,9790cddd43b211107dc4f709dc88a395:-1100863093,2409db2c9df65110165334e334b84805:-1092291900,67f81f2c10f65110e5c48a7cdc9d843a:734435245,daf8db2cc1f65110cc16244b2023e9f6:193333762,dbe89b2c89f65110a3d5b111067998f8:1918606385</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-26 12:28:39</sys_created_on>
+        <sys_db_object display_value="" name="sys_grid_canvas_pane">sys_grid_canvas_pane</sys_db_object>
+        <sys_id>2b83f2ff56094066819d45c7f7ea4a41</sys_id>
+        <sys_metadata>dbe89b2c97f6511065dcf8b3f153aff7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>6d4f425b97ee151065dcf8b3f153afe3</sys_name>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_scope_delete display_value="">2e7aa6f7de234a9598a3fcc461402aa1</sys_scope_delete>
+        <sys_update_name>sys_grid_canvas_pane_dbe89b2c97f6511065dcf8b3f153aff7</sys_update_name>
+        <sys_update_version display_value="sys_grid_canvas_pane_dbe89b2c97f6511065dcf8b3f153aff7">8df0c11197f2111065dcf8b3f153af70</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-26 12:28:39</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

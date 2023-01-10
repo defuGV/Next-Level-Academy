@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="DELETE">
+        <catalog_item display_value="Microsoft Office 365 Schulung">ece59a1a9762511065dcf8b3f153afcc</catalog_item>
+        <catalog_variable>IO:81985e1e9762511065dcf8b3f153af5b</catalog_variable>
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field/>
+        <mandatory>ignore</mandatory>
+        <order>100</order>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-18 08:43:22</sys_created_on>
+        <sys_id>55d8dbae9726911065dcf8b3f153afb2</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>startdatum</sys_name>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_55d8dbae9726911065dcf8b3f153afb2</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-10-18 08:47:24</sys_updated_on>
+        <table/>
+        <ui_policy display_value="Startdatum">1dd8dbae9726911065dcf8b3f153af94</ui_policy>
+        <variable>startdatum</variable>
+        <variable_set/>
+        <visible>false</visible>
+    </catalog_ui_policy_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</application>
+        <file_path/>
+        <instance_id>7bfca7911b8505507d9d2f8dee4bcbcc</instance_id>
+        <instance_name>dev121067</instance_name>
+        <name>catalog_ui_policy_action_55d8dbae9726911065dcf8b3f153afb2</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action"><catalog_ui_policy_action action="INSERT_OR_UPDATE"><catalog_item display_value="Microsoft Office 365 Schulung">ece59a1a9762511065dcf8b3f153afcc</catalog_item><catalog_variable>IO:81985e1e9762511065dcf8b3f153af5b</catalog_variable><cleared>false</cleared><disabled>ignore</disabled><field/><mandatory>ignore</mandatory><order>100</order><sys_class_name>catalog_ui_policy_action</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-10-18 08:43:22</sys_created_on><sys_id>55d8dbae9726911065dcf8b3f153afb2</sys_id><sys_mod_count>2</sys_mod_count><sys_name>startdatum</sys_name><sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package><sys_policy/><sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope><sys_update_name>catalog_ui_policy_action_55d8dbae9726911065dcf8b3f153afb2</sys_update_name><sys_updated_by>system</sys_updated_by><sys_updated_on>2022-10-18 08:47:24</sys_updated_on><table/><ui_policy display_value="Startdatum">1dd8dbae9726911065dcf8b3f153af94</ui_policy><variable>startdatum</variable><variable_set/><visible>false</visible></catalog_ui_policy_action></record_update>]]></payload>
+        <payload_hash>-1476921992</payload_hash>
+        <record_name>startdatum</record_name>
+        <reverted_from/>
+        <source>50dd4e529762511065dcf8b3f153aff8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-10-18 08:47:24</sys_created_on>
+        <sys_id>a0c9dbee9726911065dcf8b3f153af8e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183ea46ae0c0000001</sys_recorded_at>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-10-18 08:47:24</sys_updated_on>
+        <type>Catalog UI Policy Action</type>
+        <update_guid>28c9dbeea426911080acd1af30b5538d</update_guid>
+        <update_guid_history>28c9dbeea426911080acd1af30b5538d:-1476921992,5dd8dbae84269110973567d3d58a17b9:1003514082,5dd8dbaefb269110f3424cec3d8f2db4:-1476921992</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="startdatum">59d3ac9d9732111065dcf8b3f153af1b</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-10-26 08:35:51</sys_created_on>
+        <sys_db_object display_value="" name="catalog_ui_policy_action">catalog_ui_policy_action</sys_db_object>
+        <sys_id>21b38fe0f72d4f6ea18b63f2a4d8e731</sys_id>
+        <sys_metadata>55d8dbae9726911065dcf8b3f153afb2</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>startdatum</sys_name>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_scope_delete display_value="">2e7aa6f7de234a9598a3fcc461402aa1</sys_scope_delete>
+        <sys_update_name>catalog_ui_policy_action_55d8dbae9726911065dcf8b3f153afb2</sys_update_name>
+        <sys_update_version display_value="catalog_ui_policy_action_55d8dbae9726911065dcf8b3f153afb2">a0c9dbee9726911065dcf8b3f153af8e</sys_update_version>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-10-26 08:35:51</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

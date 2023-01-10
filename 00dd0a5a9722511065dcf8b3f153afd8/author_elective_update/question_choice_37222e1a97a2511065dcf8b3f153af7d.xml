@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="DELETE">
+        <inactive>false</inactive>
+        <order>200</order>
+        <published_ref display_value="nein">e12f5ed297a2511065dcf8b3f153af4a</published_ref>
+        <question display_value="Soll die Graduation Week in Präsenz stattfinden? (es entstehen Zusatzkosten)">f3222e1a97a2511065dcf8b3f153af70</question>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-17 10:06:06</sys_created_on>
+        <sys_id>37222e1a97a2511065dcf8b3f153af7d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>nein</sys_name>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_update_name>question_choice_37222e1a97a2511065dcf8b3f153af7d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-17 10:06:06</sys_updated_on>
+        <text>nein</text>
+        <value>nein</value>
+    </question_choice>
+    <fx_price action="DELETE" query="id=37222e1a97a2511065dcf8b3f153af7d"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</application>
+        <file_path/>
+        <instance_id>7bfca7911b8505507d9d2f8dee4bcbcc</instance_id>
+        <instance_name>dev121067</instance_name>
+        <name>question_choice_37222e1a97a2511065dcf8b3f153af7d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice"><question_choice action="INSERT_OR_UPDATE"><inactive>false</inactive><order>200</order><published_ref display_value="nein">e12f5ed297a2511065dcf8b3f153af4a</published_ref><question display_value="Soll die Graduation Week in Präsenz stattfinden? (es entstehen Zusatzkosten)">f3222e1a97a2511065dcf8b3f153af70</question><sys_class_name>question_choice</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-10-17 10:06:06</sys_created_on><sys_id>37222e1a97a2511065dcf8b3f153af7d</sys_id><sys_mod_count>0</sys_mod_count><sys_name>nein</sys_name><sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package><sys_policy/><sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope><sys_update_name>question_choice_37222e1a97a2511065dcf8b3f153af7d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-10-17 10:06:06</sys_updated_on><text>nein</text><value>nein</value></question_choice><fx_price action="delete_multiple" query="id=37222e1a97a2511065dcf8b3f153af7d"/></record_update>]]></payload>
+        <payload_hash>782704530</payload_hash>
+        <record_name>nein</record_name>
+        <reverted_from/>
+        <source>50dd4e529762511065dcf8b3f153aff8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-17 10:06:06</sys_created_on>
+        <sys_id>7b222e1a97a2511065dcf8b3f153af7f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183e568621c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-17 10:06:06</sys_updated_on>
+        <type>Question Choice</type>
+        <update_guid>ff222e1ac4a251103c5f86e426bdeb7e</update_guid>
+        <update_guid_history>ff222e1ac4a251103c5f86e426bdeb7e:782704530</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="nein">f862a25a97a2511065dcf8b3f153af59</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-10-17 10:07:00</sys_created_on>
+        <sys_db_object display_value="" name="question_choice">question_choice</sys_db_object>
+        <sys_id>067ad365ef6f4d7497d742dcc23db9b1</sys_id>
+        <sys_metadata>37222e1a97a2511065dcf8b3f153af7d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>nein</sys_name>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_parent display_value="">f3222e1a97a2511065dcf8b3f153af70</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_scope_delete display_value="">2e7aa6f7de234a9598a3fcc461402aa1</sys_scope_delete>
+        <sys_update_name>question_choice_37222e1a97a2511065dcf8b3f153af7d</sys_update_name>
+        <sys_update_version display_value="question_choice_37222e1a97a2511065dcf8b3f153af7d">7b222e1a97a2511065dcf8b3f153af7f</sys_update_version>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-10-17 10:07:00</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

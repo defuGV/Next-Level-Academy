@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="INSERT_OR_UPDATE">
+        <catalog_item display_value="HR-Schulung für Teamleitende">63237bde97e6511065dcf8b3f153afd6</catalog_item>
+        <catalog_variable>IO:6b23bbde97e6511065dcf8b3f153af0b</catalog_variable>
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field/>
+        <mandatory>ignore</mandatory>
+        <order>100</order>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-17 16:00:00</sys_created_on>
+        <sys_id>3723bbde97e6511065dcf8b3f153af39</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>startdatum</sys_name>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_3723bbde97e6511065dcf8b3f153af39</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-17 16:00:00</sys_updated_on>
+        <table/>
+        <ui_policy display_value="Startdatum">3f23bbde97e6511065dcf8b3f153af30</ui_policy>
+        <variable>startdatum</variable>
+        <variable_set/>
+        <visible>false</visible>
+    </catalog_ui_policy_action>
+</record_update>

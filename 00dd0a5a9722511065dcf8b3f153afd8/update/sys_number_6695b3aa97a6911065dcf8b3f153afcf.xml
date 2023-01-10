@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number">
+    <sys_number action="INSERT_OR_UPDATE">
+        <category display_value="" name="x_849329_nextlevel_zahlungsdaten">x_849329_nextlevel_zahlungsdaten</category>
+        <maximum_digits>5</maximum_digits>
+        <number>1000</number>
+        <prefix>ZAH</prefix>
+        <sys_class_name>sys_number</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-18 10:49:04</sys_created_on>
+        <sys_id>6695b3aa97a6911065dcf8b3f153afcf</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>ZAH</sys_name>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_update_name>sys_number_6695b3aa97a6911065dcf8b3f153afcf</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-21 09:43:36</sys_updated_on>
+    </sys_number>
+</record_update>

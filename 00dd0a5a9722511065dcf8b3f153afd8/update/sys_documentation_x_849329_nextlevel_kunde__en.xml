@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="" label="Kunden" language="en" table="x_849329_nextlevel_kunde">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element/>
+            <help/>
+            <hint/>
+            <label>Kunden</label>
+            <language>en</language>
+            <name>x_849329_nextlevel_kunde</name>
+            <plural>Kundens</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-10-18 10:35:44</sys_created_on>
+            <sys_id>ab8233e697a6911065dcf8b3f153afc3</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>Kunden</sys_name>
+            <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+            <sys_update_name>sys_documentation_x_849329_nextlevel_kunde__en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-10-18 10:40:39</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

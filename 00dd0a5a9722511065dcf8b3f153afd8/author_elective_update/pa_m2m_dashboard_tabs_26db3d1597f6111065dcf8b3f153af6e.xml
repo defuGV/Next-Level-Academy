@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="pa_m2m_dashboard_tabs">
+    <pa_m2m_dashboard_tabs action="DELETE">
+        <dashboard display_value="Next Level Academy">c32f025b97ee151065dcf8b3f153af24</dashboard>
+        <home>false</home>
+        <homepage/>
+        <order>2</order>
+        <sys_class_name>pa_m2m_dashboard_tabs</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-26 15:00:25</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>26db3d1597f6111065dcf8b3f153af6e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>c32f025b97ee151065dcf8b3f153af24</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_update_name>pa_m2m_dashboard_tabs_26db3d1597f6111065dcf8b3f153af6e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-26 15:00:25</sys_updated_on>
+        <tab display_value="Next Level Academy - New Tab 2">66db3d1597f6111065dcf8b3f153af6b</tab>
+    </pa_m2m_dashboard_tabs>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</application>
+        <file_path/>
+        <instance_id>7bfca7911b8505507d9d2f8dee4bcbcc</instance_id>
+        <instance_name>dev121067</instance_name>
+        <name>pa_m2m_dashboard_tabs_26db3d1597f6111065dcf8b3f153af6e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="pa_m2m_dashboard_tabs"><pa_m2m_dashboard_tabs action="INSERT_OR_UPDATE"><dashboard display_value="Next Level Academy">c32f025b97ee151065dcf8b3f153af24</dashboard><home>false</home><homepage/><order>2</order><sys_class_name>pa_m2m_dashboard_tabs</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-10-26 15:00:25</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>26db3d1597f6111065dcf8b3f153af6e</sys_id><sys_mod_count>0</sys_mod_count><sys_name>c32f025b97ee151065dcf8b3f153af24</sys_name><sys_overrides/><sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package><sys_policy/><sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope><sys_update_name>pa_m2m_dashboard_tabs_26db3d1597f6111065dcf8b3f153af6e</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-10-26 15:00:25</sys_updated_on><tab display_value="Next Level Academy - New Tab 2">66db3d1597f6111065dcf8b3f153af6b</tab></pa_m2m_dashboard_tabs></record_update>]]></payload>
+        <payload_hash>1947158918</payload_hash>
+        <record_name>c32f025b97ee151065dcf8b3f153af24</record_name>
+        <reverted_from/>
+        <source>50dd4e529762511065dcf8b3f153aff8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-26 15:00:25</sys_created_on>
+        <sys_id>7edb3d1597f6111065dcf8b3f153af70</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18414cf10f00000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-26 15:00:25</sys_updated_on>
+        <type>Dashboard Tab</type>
+        <update_guid>76db3d15d6f61110373f143fd2a7a470</update_guid>
+        <update_guid_history>76db3d15d6f61110373f143fd2a7a470:1947158918</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Next Level Academy">c0ebf91597f6111065dcf8b3f153af71</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-26 15:00:30</sys_created_on>
+        <sys_db_object display_value="" name="pa_m2m_dashboard_tabs">pa_m2m_dashboard_tabs</sys_db_object>
+        <sys_id>d07a2338fc514f4296ef58865d7849a4</sys_id>
+        <sys_metadata>26db3d1597f6111065dcf8b3f153af6e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>c32f025b97ee151065dcf8b3f153af24</sys_name>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_parent display_value="Next Level Academy">c32f025b97ee151065dcf8b3f153af24</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_scope_delete display_value="">2e7aa6f7de234a9598a3fcc461402aa1</sys_scope_delete>
+        <sys_update_name>pa_m2m_dashboard_tabs_26db3d1597f6111065dcf8b3f153af6e</sys_update_name>
+        <sys_update_version display_value="pa_m2m_dashboard_tabs_26db3d1597f6111065dcf8b3f153af6e">7edb3d1597f6111065dcf8b3f153af70</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-26 15:00:30</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Feedback scores" max_length="40" name="x_849329_nextlevel_feedback_scores" sizeclass="29" type="collection">
+        <element label="Score Trainingsinhalte" max_length="40" name="overall_score" type="string"/>
+        <element label="Schulungsnr" max_length="40" name="schulung" reference="x_849329_nextlevel_schulung" type="reference"/>
+        <element label="Score für Trainer" max_length="40" name="score_f_r_trainer" type="integer"/>
+        <element label="Score für Trainings" max_length="40" name="score_f_r_trainings" type="integer"/>
+        <element label="Thema" max_length="32" name="thema" reference="x_849329_nextlevel_programm" type="reference"/>
+        <element label="Score Trainer" max_length="40" name="trainer_score" type="string"/>
+        <index name="index">
+            <element name="thema"/>
+        </index>
+    </element>
+</database>

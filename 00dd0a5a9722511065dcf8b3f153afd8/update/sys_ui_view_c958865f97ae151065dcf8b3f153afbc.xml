@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_view">
+    <sys_ui_view action="INSERT_OR_UPDATE">
+        <group/>
+        <hidden>false</hidden>
+        <name>catalog_next_level_academy_schulungen</name>
+        <roles/>
+        <sys_class_name>sys_ui_view</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-20 10:47:04</sys_created_on>
+        <sys_id>c958865f97ae151065dcf8b3f153afbc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Next Level Academy Schulungen View</sys_name>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_update_name>sys_ui_view_c958865f97ae151065dcf8b3f153afbc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-20 10:47:04</sys_updated_on>
+        <title>Next Level Academy Schulungen View</title>
+        <user/>
+    </sys_ui_view>
+</record_update>

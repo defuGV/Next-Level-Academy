@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Programme" max_length="40" name="x_849329_nextlevel_programm" sizeclass="4" type="collection">
+        <element label="Beschreibung" max_length="250" name="beschreibung" type="string_full_utf8"/>
+        <element label="Preis Hybrid" max_length="20" name="preis_hybrid" type="currency"/>
+        <element label="Trainer" max_length="32" name="trainer" reference="x_849329_nextlevel_trainer" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Name" mandatory="true" max_length="50" name="u_name" type="string"/>
+        <element label="Verantwortlicher" max_length="32" name="verantwortlicher" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="trainer"/>
+        </index>
+        <index name="index2">
+            <element name="verantwortlicher"/>
+        </index>
+    </element>
+</database>

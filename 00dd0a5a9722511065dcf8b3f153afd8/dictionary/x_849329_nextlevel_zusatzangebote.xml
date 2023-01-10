@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Zusatzangebote" max_length="40" name="x_849329_nextlevel_zusatzangebote" sizeclass="3" type="collection">
+        <element label="Name" max_length="255" name="name" type="string_full_utf8"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Preis" max_length="20" name="preis" type="currency"/>
+        <element label="Programm" max_length="32" name="programm" reference="x_849329_nextlevel_programm" type="reference"/>
+        <index name="index">
+            <element name="programm"/>
+        </index>
+    </element>
+</database>

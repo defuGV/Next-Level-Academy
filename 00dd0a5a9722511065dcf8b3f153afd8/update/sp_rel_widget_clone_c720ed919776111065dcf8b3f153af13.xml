@@ -1,0 +1,793 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_rel_widget_clone">
+    <sp_rel_widget_clone action="INSERT_OR_UPDATE">
+        <child display_value="Copy of Content Experience">c7206d919776111065dcf8b3f153af8f</child>
+        <cloned>2022-10-26 12:59:29</cloned>
+        <last_validated>2022-10-26 12:59:29</last_validated>
+        <parent display_value="Content Experience">26b2b8cfff02201014c6a36cf43bf1a0</parent>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;sp_widget&gt;&lt;category&gt;custom&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[function cdContentExperienceController($element, $interval, $scope, $sce, $timeout, $window, i18n, cdAnalytics) {
+	var c = this;
+	var contentsViewed = {};
+	var interval;
+	
+	c.i18n = i18n;
+	c.i18n.loadMessage('play_carousel', 'Play carousel');
+	c.i18n.loadMessage('pause_carousel', 'Pause carousel');
+	c.i18n.loadMessage('scroll_up', 'Scroll up');
+	c.i18n.loadMessage('scroll_down', 'Scroll down');
+	c.itemDisplayCount = 5;
+	c.activeIndex = 0;
+	c.startIndex = 0;
+	c.paused = true;
+	c.forceDots = $element[0].getElementsByClassName('widget-content-experience')[0].clientWidth &lt; 900;
+	c.styledContentSysId = "41040dd7237e2300fb0c949e27bf652a";
+	c.bannerContentSysId = "a673597a0b4303008cd6e7ae37673a6f";
+	
+	c.clickItem = function(index) {
+		c.stopCarousel();
+		c.activeIndex = index;
+		c.selectItem(c.data.items[index]);
+	};
+
+	c.selectItem = function(item) {
+		$scope.$broadcast('closeReadMoreModal');
+		c.activeItem = item;
+		trackImpression(c.activeItem);
+	};
+
+	c.scrollUp = function() {
+		c.stopCarousel();
+		c.activeIndex = c.activeIndex - 1;
+		if (c.activeIndex &lt; 0) {
+			c.activeIndex = c.data.items.length - 1;
+			c.startIndex = c.data.items.length - c.itemDisplayCount;
+		} else if (c.startIndex &gt; c.activeIndex)
+			c.startIndex = c.startIndex - 1;
+		c.selectItem(c.data.items[c.activeIndex]);
+	};
+
+	c.scrollDown = function(autoScroll) {
+		if (!autoScroll)
+			c.stopCarousel();
+		c.activeIndex = c.activeIndex + 1;
+		if (c.activeIndex &gt;= c.data.items.length) {
+			c.activeIndex = 0;
+			c.startIndex = 0;
+		} else if (c.startIndex + c.itemDisplayCount &lt;= c.activeIndex)
+			c.startIndex = c.startIndex + 1;
+		c.selectItem(c.data.items[c.activeIndex]);
+	};
+	
+	c.startCarousel = function() {
+		c.paused = false;
+		interval = $interval(function() {
+			c.scrollDown(true);
+		}, 10000);
+	};
+	
+	c.stopCarousel = function() {
+		c.paused = true;
+		if (interval == null)
+			return;
+		$interval.cancel(interval);
+		interval = null;
+	};
+	
+	c.setLayoutType = function() {
+		var cew = $element[0].getElementsByClassName('widget-content-experience')[0];
+		if (cew &amp;&amp; cew.clientWidth &lt; 900){
+			return c.forceDots = true;
+		}
+		switch (c.data.layoutType) {
+			case 'Carousel':
+				c.forceDots = true;
+			break;
+			default:
+				c.forceDots = $element[0].getElementsByClassName('widget-content-experience')[0].clientWidth &lt; 900;
+		}
+	};
+	
+	c.togglePause = function() {
+		if (c.paused)
+			c.startCarousel();
+		else
+			c.stopCarousel();
+	};
+
+	c.getGradient = function() {
+		if (c.activeItem.content_type === c.styledContentSysId &amp;&amp; c.activeItem.add_gradient)
+			return 'gradient-' + c.activeItem.text_color;
+	};
+	
+	c.checkForDefectiveBanner = function() {
+		if (c.activeItem.content_type === c.bannerContentSysId &amp;&amp; c.activeItem.type==='block') {
+			return c.getExpandedBackground();
+		}
+	};
+	
+	/* Will account for expanded image of banner, video or block */
+	c.getExpandedBackground = function() {
+		c.setLayoutType();
+		if (!c.data.expandBkgdImage) 
+			return;
+		var styles = {};
+		if (c.activeItem.content_type === c.bannerContentSysId &amp;&amp; c.activeItem.background_image){
+			styles['background-image'] = 'url(/' + c.activeItem.background_image + ')';
+			styles['background-size'] = c.activeItem.background_size;
+			styles['background-position'] = c.activeItem.background_position.replace('-', ' ');
+			return styles;	
+		}
+		if (c.activeItem.content_type === c.styledContentSysId ) {
+			if (c.activeItem.background_image &amp;&amp; c.activeItem.add_background_image)
+				styles['background-image'] = 'url(/' + c.activeItem.background_image + ')';
+			if (c.activeItem.background_position)
+				styles['background-position'] = c.activeItem.background_position.replace('-', ' ');
+			if (c.activeItem.background_size)
+				styles['background-size'] = c.activeItem.background_size;
+			if (c.activeItem.background_color)
+				styles['background-color'] = c.activeItem.background_color;
+			return styles;
+		}
+		return {};
+	};
+
+	c.getGlyphClasses = function (item) {
+		if (c.hasExpandedBackground==='false') {
+			return;
+		}
+		var styles = '';
+		if (c.activeItem.icon &amp;&amp; c.activeItem.add_icon) {
+			styles = 'fa fa-' + c.activeItem.icon;
+		}
+		if (c.activeItem.text_alignment) {
+			styles = styles + ' text-alignment-' + c.activeItem.text_alignment;
+		}
+		if (c.activeItem.icon_size &amp;&amp; c.activeItem.add_icon) {
+			styles = styles + ' glyph-size-' + c.activeItem.icon_size;
+		}
+		if (c.activeItem.text_color) {
+			styles = styles + ' text-color-' + c.activeItem.text_color;
+		}
+		return styles;
+	};
+
+	
+	c.isBanner = function () {
+		if (c.activeItem)
+			return (c.activeItem.content_type === c.styledContentSysId &amp;&amp; c.activeItem.type === 'banner') || c.activeItem.content_type === c.bannerContentSysId;
+	};
+
+	c.getStyle = function() {
+		if (!c.data.expandBkgdImage &amp;&amp; c.activeItem.content_type === c.styledContentSysId &amp;&amp; 
+			(c.activeItem.type === 'banner' || c.activeItem.type === 'video' || c.activeItem.text_over_background)) {
+			var styles = {};
+			if (c.activeItem.background_image &amp;&amp; c.activeItem.add_background_image)
+				styles['background-image'] = 'url(/' + c.activeItem.background_image + ')';
+			if (c.activeItem.background_position)
+				styles['background-position'] = c.activeItem.background_position.replace('-', ' ');
+			if (c.activeItem.background_size)
+				styles['background-size'] = c.activeItem.background_size;
+			if (c.activeItem.background_color)
+				styles['background-color'] = c.activeItem.background_color;
+			return styles;
+		}
+		return {};
+	};
+	
+	c.tooltipEnabled = function(className) {
+		var element = $element[0].getElementsByClassName(className)[0];
+		return element.scrollHeight &gt; element.clientHeight;
+	};
+	
+	$scope.$on('$destroy', function() {
+		c.stopCarousel();
+	});
+	
+	angular.element($window).bind('resize', function(){
+		c.forceDots = $element[0].getElementsByClassName('widget-content-experience')[0].clientWidth &lt; 900;
+		scope.$apply();
+	});
+	
+	function trackImpression(ceItem) {
+		var actionName = ceItem.title + '-' + ceItem.sys_id;
+		
+		// Don't overdo it with logging banner views. Just do it once per page load
+		if (!c.data.isContentPreview &amp;&amp; !(actionName in contentsViewed)) {
+			cdAnalytics.trackEvent('Content Experience Impression', ceItem);
+			contentsViewed[actionName] = true;
+		}
+	}
+	
+	function displayItems() {
+		if (c.data &amp;&amp; c.data.items &amp;&amp; c.data.items.length &gt; 0) {
+			c.selectItem(c.data.items[0]);
+			for (var i=0; i &lt; c.data.items.length; i++){
+				c.data.items[i].html = $sce.trustAsHtml(c.data.items[i].rich_text);
+				c.data.items[i].showPreviewTooltip = (c.data.items[i].url == '') &amp;&amp; c.data.isContentPreview;
+				if(c.data.items[i].video_url){
+					c.data.items[i].video_url = $sce.trustAsResourceUrl(c.data.items[i].video_url);
+				}
+			}
+
+			if (c.data.items.length &gt; 1)
+				c.startCarousel();
+		}
+	}
+	var load_config = c.data.load_config;
+	if (load_config === "async") {
+		c.data.action = 'loadData';
+		c.server.update().then(displayItems);
+	} else
+		displayItems();
+}
+]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css&gt;$preview-outline: #005b9d !default;
+$preview-outline-inactive: #485563 !default;
+$preview-outline-text-color: #ffffff !default;
+$list-header: #000;
+$list-header-active: #000;
+$list-text: #637274;
+$list-background: rgba(255, 255, 255, 0.9);
+$list-item-background: #616161;
+$list-item-background-active: #fff;
+$list-arrow-background: #fff; 
+$list-arrow-border: rgba(230, 230, 230, 0.9); 
+$list-border: rgba(255, 255, 255, 0.3); 
+$dots-background-active: rgba(255, 255, 255, 0.9); 
+$dots-border: rgba(135, 144, 161, 0.8); 
+$pause-background: rgba(255, 255, 255, 0.8); 
+$pause-text: #2e2e2e; 
+$arrow-background: rgba(46, 46, 46, 0.8); 
+$arrow-text: rgba(255, 255, 255, 1); 
+$tropical-rain: null !default; 
+ 
+.widget-content-experience { 
+	position: relative; 
+ 
+	&amp;amp;.container-offset { 
+		margin: -10px -15px 22px -15px; 
+	} 
+ 
+	.widget-container { 
+		background-size: cover; 
+		background-repeat: no-repeat; 
+		background-position: center top; 
+		display: flex; 
+		flex-flow: row nowrap; 
+		height: 400px; 
+ 
+		.widget-content { 
+          	background-repeat: no-repeat; 
+			flex: 1 0 0; 
+			position: relative; 
+			.read-less-btn:hover, .read-more-btn:hover { 
+				@if $tropical-rain != null { 
+					color: $tropical-rain; 
+					border-color: $tropical-rain; 
+				} 
+			} 
+			.pause-toggle { 
+				align-items: center; 
+				background: none; 
+				border: none; 
+				border-radius: 50%; 
+				bottom: 16px; 
+				display: flex; 
+				font-size: 40px; 
+				height: 40px; 
+				justify-content: center; 
+				padding: 0; 
+				position: absolute; 
+				right: 6px; 
+				width: 40px; 
+ 
+				.pause-background { 
+					background: $pause-background; 
+					border-radius: 50%; 
+					height: 30px; 
+					margin: auto; 
+					position: absolute; 
+					width: 30px; 
+				} 
+ 
+				.fa { 
+					color: $pause-text; 
+					position: relative; 
+				} 
+			} 
+		} 
+		.block-top-content { 
+			min-height: 150px; 
+		} 
+ 
+		.block-top-content i { 
+			padding: 0; 
+			width: 100%; 
+		} 
+ 
+		.block-top-content { 
+			background-repeat: no-repeat; 
+			width: 100%; 
+			padding: 40px 75px 0; 
+		} 
+		.list { 
+			display: flex; 
+			flex: 0 1 25%; 
+			flex-flow: column nowrap; 
+			height: 100%; 
+			max-width: 500px; 
+			min-width: 250px; 
+			z-index:3; 
+ 
+			.hidden-status { 
+				clip: rect(1px, 1px, 1px, 1px); 
+				height: 1px; 
+				overflow: hidden; 
+				position: absolute; 
+				width: 1px; 
+			} 
+ 
+			ul { 
+				background-color: $list-background; 
+				display: flex; 
+				flex: 1 0 0; 
+				flex-flow: column nowrap; 
+				justify-content: flex-end; 
+				margin: 0; 
+				position: relative; 
+ 
+				li { 
+					align-items: center; 
+					background: none; 
+					border-bottom: 1px solid $list-border; 
+					display: flex; 
+					flex: 1 0 70px; 
+					overflow: hidden; 
+ 
+					&amp;amp;.active { 
+						background-color: $list-item-background-active; 
+						border-radius: 6px 0 0 6px; 
+						box-shadow: 0px 2px 10px 0px rgba(23, 40, 52, 0.08); 
+						flex: 1 0 85px; 
+						margin-left: -15px; 
+ 
+						button.btn-primary { 
+							border-radius: 6px 0 0 6px; 
+						} 
+ 
+						span { 
+							color: $list-header-active; 
+							font-weight: bold; 
+						} 
+					} 
+ 
+					&amp;amp;.ng-animate { 
+						transition: all 0.1s linear; 
+					} 
+ 
+					&amp;amp;.ng-enter, 
+					&amp;amp;.ng-leave.ng-leave-active { 
+						max-height: 0; 
+					} 
+ 
+					&amp;amp;.ng-enter.ng-enter-active, 
+					&amp;amp;.ng-leave { 
+						max-height: 85px; 
+					} 
+ 
+					.btn { 
+						background: none; 
+						height: 100%; 
+						padding: 16px; 
+						text-align: unset; 
+						white-space: initial; 
+						width: 100%; 
+ 
+						span { 
+							color: $list-header; 
+							display: -webkit-box; 
+							font-size: 16px; 
+							line-height: 1.42857143; 
+							margin: 0; 
+							overflow: hidden; 
+							overflow-wrap: anywhere; 
+							-webkit-box-orient: vertical; 
+							-webkit-line-clamp: 2; 
+						} 
+					} 
+				} 
+			} 
+ 
+			.scroll-btns { 
+				background: $list-arrow-background; 
+				box-shadow: 0px 2px 10px 0px rgba(23, 40, 52, 0.08); 
+				display: flex; 
+				flex: 0 0 30px; 
+				justify-content: center; 
+ 
+				.btn { 
+					align-items: center; 
+					background: none; 
+					border: none; 
+					border-radius: 0; 
+					color: $list-text; 
+					display: flex; 
+					flex: 1 0 0; 
+					font-size: 16px; 
+					justify-content: center; 
+					padding: 0 10px; 
+ 
+					&amp;amp;:first-child { 
+						border-right: 1px solid $list-arrow-border; 
+					} 
+				} 
+			} 
+		} 
+ 
+		.nav-arrow { 
+			align-items: center; 
+			background: none; 
+			border: none; 
+			border-radius: 50%; 
+			bottom: 0; 
+			color: $arrow-text; 
+			display: flex; 
+			font-size: 40px; 
+			height: 40px; 
+			justify-content: center; 
+			margin: auto; 
+			padding: 0; 
+			position: absolute; 
+			top: 0; 
+			width: 40px; 
+ 
+			.arrow-background { 
+				background-color: $arrow-background; 
+				border-radius: 50%; 
+				height: 30px; 
+				margin: auto; 
+				position: absolute; 
+				width: 30px; 
+			} 
+ 
+			.fa { 
+				position: relative; 
+			} 
+		} 
+ 
+		.left-arrow { 
+			left: 6px; 
+		} 
+ 
+		.right-arrow { 
+			right: 6px; 
+		} 
+ 
+		.dots { 
+			bottom: 0; 
+			left: 50%; 
+			position: absolute; 
+ 
+			ul { 
+				display: flex; 
+				flex-flow: row nowrap; 
+				left: -50%; 
+				margin: 0; 
+				position: relative; 
+ 
+				li { 
+					padding: 8px 6px; 
+ 
+					.dot { 
+						background: none; 
+						border: 1px solid $dots-border; 
+						border-radius: 50%; 
+						display: block; 
+						height: 10px; 
+						padding: 0; 
+						width: 10px; 
+ 
+						&amp;amp;.active { 
+							background: $dots-background-active; 
+							border-color: $dots-background-active; 
+						} 
+					} 
+				} 
+			} 
+		} 
+	} 
+ 
+	/* Remove heading text while remaining WCAG-compliant */ 
+	&amp;amp;:not(.show-heading) { 
+		.panel { 
+			.panel-heading { 
+				position: absolute; 
+				left: -9999px; 
+				top: -9999px; 
+			} 
+ 
+			.panel { 
+				.panel-heading { 
+					position: relative; 
+					left: inherit; 
+					top: inherit; 
+				} 
+			} 
+		} 
+	} 
+	&amp;amp;:not(.show-background) { 
+		.panel, .panel-heading { 
+			background: none !important; 
+			border: none !important; 
+			box-shadow: none !important; 
+			margin-bottom: 0 !important; 
+		} 
+	} 
+ 
+	/* Remove bounding box style for outermost panel */ 
+	&amp;amp;:not(.show-bounding-box) { 
+		.panel { 
+			border-color: transparent; 
+			border-radius: 0; 
+			box-shadow: none; 
+			.panel { 
+				border-color: $color-lighter; 
+			} 
+		} 
+	} 
+ 
+	.panel-body { 
+		padding: 0; 
+	} 
+} 
+ 
+.widget-content-experience-mobile { 
+	margin: -10px -15px 30px -15px !important; 
+	border-bottom: 12px solid #f6f7f7; 
+	.widget-swipe-container { 
+		position: absolute; 
+		height: -webkit-fill-available; 
+		width: -webkit-fill-available; 
+	} 
+	.widget-container { 
+		margin-top: 0 !important; 
+		height: 212px !important; 
+		.dots { 
+			bottom: 3px !important; 
+			li { 
+				padding: 8px 2px !important; 
+			} 
+			.dot { 
+				background: #e4e6e7 !important; 
+				border-color: #e4e6e7 !important; 
+				width: 6px !important; 
+				height: 6px !important; 
+				&amp;amp;.btn.active { 
+					background: #637274 !important; 
+					border-color: #637274 !important; 
+				} 
+			} 
+		} 
+		.nav-arrow { 
+			bottom: 40px !important; 
+		} 
+		.pause-toggle { 
+			bottom: 10px !important; 
+		} 
+	} 
+	.widget-container-spacing-mobile { 
+		height: 35px; 
+	} 
+} 
+ 
+@media (min-width: 768px) { 
+	.widget-content-experience { 
+		.widget-container { 
+			.right-arrow { 
+				right: 23px; 
+			} 
+			.left-arrow { 
+				left: 23px; 
+			} 
+		} 
+	} 
+} 
+ 
+@media (min-width: 992px) { 
+	.widget-content-experience { 
+		.widget-container { 
+			.widget-content { 
+				.pause-toggle { 
+					right: 20px; 
+				} 
+			} 
+		} 
+	} 
+} 
+ 
+.preview-outline { 
+	border: 3px solid $preview-outline; 
+} 
+ 
+.preview-info-tab { 
+	background-color: $preview-outline; 
+} 
+ 
+.preview-info-container-compact { 
+	background-color: $preview-outline; 
+} 
+ 
+.preview-info-tab-compact { 
+	background-color: $preview-outline; 
+} 
+ 
+.preview-info-popup { 
+	color: $preview-outline-text-color; 
+} 
+ 
+.preview-info-tab-text { 
+	color: $preview-outline-text-color; 
+} 
+ 
+.preview-outline-inactive { 
+	border: 3px solid $preview-outline-inactive; 
+ 
+	.preview-info-tab { 
+		background-color: $preview-outline-inactive; 
+	} 
+ 
+	.preview-info-container-compact { 
+		background-color: $preview-outline-inactive; 
+	} 
+ 
+	.preview-info-tab-compact { 
+		background-color: $preview-outline-inactive; 
+	} 
+} 
+ 
+@media(max-width:375px) { 
+  .widget-content-experience { 
+    .widget-container { 
+      .right-arrow{ 
+        display: none; 
+      } 
+      .left-arrow{ 
+        display: none; 
+      } 
+    } 
+  } 
+}&lt;/css&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description&gt;Displays portal content with different content types in a configurable layout.&lt;/description&gt;&lt;docs/&gt;&lt;field_list/&gt;&lt;has_preview&gt;true&lt;/has_preview&gt;&lt;id&gt;cd-content-experience&lt;/id&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function cdContentExperienceLink(scope, element, attrs, c) {
+// 	c.$contentExperience = jQuery(element[0]);
+
+// 	c.$contentExperience.bind('keyup', function(e) {
+// 		if (e.keyCode === 13) {
+// 			var $focusedIndicator = c.$contentExperience.find('.carousel-indicator:focus');
+// 			var $targetedTabpanel = c.$contentExperience.find("#" + $focusedIndicator.attr('aria-controls'));
+// 			var $currentTargedTabpanel = c.$contentExperience.find('[tabindex="-1"]');
+
+// 			if ($currentTargedTabpanel)
+// 				$currentTargedTabpanel.attr('tabindex', 0);
+
+// 			$focusedIndicator.trigger('click');
+// 			$targetedTabpanel.attr('tabindex', -1);
+// 		}
+// 	});
+}]]&gt;&lt;/link&gt;&lt;name&gt;Content Experience&lt;/name&gt;&lt;option_schema&gt;[{"name":"displayHeadingText","section":"other","default_value":"false","label":"Display heading text","type":"boolean"},
+{"name":"displayBoundingBox","section":"other","default_value":"false","label":"Display bounding box","type":"boolean"},
+{"name":"showBackground","section":"other","default_value":"false","label":"Display widget background color","type":"boolean"},
+{"hint":"Pick type of layout to display content","name":"layoutTypes","section":"Layout Types","default_value":"List","label":"Widget Style (Applies only to Desktop)","type":"choice","choices":[{"label":"Right-hand list menu (default)","value":"List"},{"label":"Dotted carousel","value":"Carousel"}]},
+{"name":"expandBkgdImage","section":"Layout Types","default_value":"false","label":"Allow background image to be partially covered by Right-hand list menu","type":"boolean"},
+{"name":"load_config","section":"other","default_value":"async","label":"Load configuration","type":"choice","choices":[{"label":"Synchronous","value":"sync"},{"label":"Asynchronous","value":"async"}]}]
+&lt;/option_schema&gt;&lt;public&gt;false&lt;/public&gt;&lt;roles&gt;snc_internal,sn_asc.alumni&lt;/roles&gt;&lt;script&gt;&lt;![CDATA[(function () {
+	data.load_config = options.load_config;
+	if (data.load_config === "async" &amp;&amp; (!input || input.action !== "loadData"))
+		return;
+
+	var grInstanceRecord = $sp.getInstanceRecord();
+	data.spInstanceId = grInstanceRecord.getUniqueValue();
+	data.spInstanceTitle = grInstanceRecord.getDisplayValue('title');
+	data.disabledTooltip = gs.getMessage("This action is disabled and is in preview mode only");
+	data.isMobileApp = $sp.getParameter('view') === 'mobile';
+
+	data.isContentPreview = cd_ContentDelivery.isContentPreview($sp);
+	data.items = cd_ContentDelivery.getContent($sp, data.spInstanceId);
+
+	data.items.forEach(function (item) {
+		var additionalDetails = [{
+			label: gs.getMessage('Portal Content'),
+			value: 'Portal Content Experience'
+		}];
+
+		cd_ContentDelivery.setInfoObjectOnContentItem(item, additionalDetails);
+	});
+
+	// Get options from sp instance to hide/show heading text
+	data.displayHeadingText = options.displayHeadingText == 'true';
+	// Get options from sp instance to hide/show bounding box style
+	data.displayBoundingBox = options.displayBoundingBox == 'true';
+	// Get options from sp instance to hide/show the background
+	data.showBackground = options.showBackground == 'true';
+	// Get options from sp instance to get layout types
+	data.layoutType = options.layoutTypes;
+	// Get options from sp instance to expand background image
+	data.expandBkgdImage = options.expandBkgdImage == 'true';
+
+	data.messages = {
+		'indicatorLabel': gs.getMessage('{0}: Slide {1}'), //{0} is the spInstance title, {0} is a number, e.g. 1
+		'carouselButtonLabel': gs.getMessage('Carousel button')
+	};
+})();
+]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-02-08 21:27:56&lt;/sys_created_on&gt;&lt;sys_id&gt;26b2b8cfff02201014c6a36cf43bf1a0&lt;/sys_id&gt;&lt;sys_mod_count&gt;274&lt;/sys_mod_count&gt;&lt;sys_name&gt;Content Experience&lt;/sys_name&gt;&lt;sys_package display_value="Content Publishing" source="sn_cd"&gt;b26210490b7203008cd6e7ae37673a6a&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Content Publishing"&gt;b26210490b7203008cd6e7ae37673a6a&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_26b2b8cfff02201014c6a36cf43bf1a0&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-06-19 14:10:05&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;section class="widget-content-experience" ng-class="{ 'widget-content-experience-mobile': data.isMobileApp, 'container-offset': c.isBanner(), 'show-heading': c.data.displayHeadingText, 'show-bounding-box': c.data.displayBoundingBox, 'show-background': c.data.showBackground }"&gt;
+	&lt;sp-panel rect="rect" ng-if="c.data.items.length"&gt;
+		&lt;div class="widget-container" ng-class="{'carousel-layout' : c.forceDots}" ng-if="c.data.items.length &gt; 0" ng-style="c.activeItem.type==='block' &amp;&amp; !c.activeItem.text_over_background? c.checkForDefectiveBanner() : c.getExpandedBackground()" ng-swipe-left="c.data.items.length &gt; 1 &amp;&amp; data.isMobileApp ? c.scrollDown() : ''" ng-swipe-right="c.data.items.length &gt; 1 &amp;&amp; data.isMobileApp ? c.scrollUp() : ''"&gt;
+      			&lt;div
+				class="widget-content"
+				ng-class="[c.getGradient(), {mobile: c.data.items.length &gt;= 1 &amp;&amp; c.forceDots}, {'preview-outline preview-info-container-parent': c.activeItem.is_preview &amp;&amp; c.activeItem.is_content_active === '1'}, {'preview-outline-inactive preview-info-container-parent': c.activeItem.is_preview &amp;&amp; c.activeItem.is_content_active === '0'}]"
+				ng-style="c.getStyle()" ng-switch="c.activeItem.content_type"             
+			&gt;
+				&lt;portal-content-preview-info-tab is-compact="false" item="c.activeItem" index="1"&gt;
+				&lt;/portal-content-preview-info-tab&gt;
+				&lt;cd-banner ng-switch-when="a673597a0b4303008cd6e7ae37673a6f" banner-item="c.activeItem" index="1" is-content-preview="c.data.isContentPreview" disabled-tooltip="c.data.disabledTooltip" has-expanded-background="c.data.expandBkgdImage" &gt;&lt;/cd-banner&gt;
+				&lt;cd-styled-content ng-switch-when="41040dd7237e2300fb0c949e27bf652a" styled-content-item="c.activeItem" index="1" 
+                                     is-content-preview="c.data.isContentPreview" 
+                                     disabled-tooltip="c.data.disabledTooltip"  
+                                     has-expanded-background="c.data.expandBkgdImage"
+                                     active-item="c.activeItem"&gt;
+				&lt;/cd-styled-content&gt;
+				&lt;button class="pause-toggle btn btn-primary" ng-click="c.togglePause()" ng-if="c.data.items.length &gt; 1 &amp;&amp; !data.isMobileApp" aria-label="{{c.paused ? 'Play' : 'Pause'}}"&gt;
+						&lt;div class="pause-background"&gt;&lt;/div&gt;
+						&lt;span class="fa fa-pause-circle-o" role="button" ng-if="!c.paused" uib-tooltip="{{c.i18n.getMessage('pause_carousel')}}" aria-label="{{c.i18n.getMessage('pause_carousel')}}"&gt;&lt;/span&gt;
+						&lt;span class="fa fa-play-circle-o" role="button" ng-if="c.paused" uib-tooltip="{{c.i18n.getMessage('play_carousel')}}" aria-label="{{c.i18n.getMessage('play_carousel')}}"&gt;&lt;/span&gt;
+				&lt;/button&gt;
+			&lt;/div&gt;
+
+			&lt;div class="list" ng-if="c.data.items.length &gt; 1 &amp;&amp; !c.forceDots"&gt;
+				&lt;div class="hidden-status" aria-live="polite"&gt;Banner {{c.activeIndex + 1}} of {{c.data.items.length}}: {{c.activeItem.heading_text}}&lt;/div&gt;
+				&lt;ul class="list-unstyled"&gt;
+					&lt;li ng-repeat="ceItem in c.data.items | limitTo : c.itemDisplayCount : c.startIndex" ng-class="{ active: c.activeItem.sys_id === ceItem.sys_id }" class="widget-content-experience-content-btn"&gt;
+						&lt;button class="btn btn-primary" ng-click="c.clickItem($index + c.startIndex)" aria-label="{{c.data.messages.carouselButtonLabel + ' ' + $index}}"&gt;
+							&lt;span class="{{'heading' + $index}}" uib-tooltip="{{ceItem.heading_text}}" tooltip-class="tooltip-overflow" tooltip-enable="c.tooltipEnabled('heading' + $index)" tooltip-append-to-body="true"&gt;{{ ::ceItem.heading_text }}&lt;/span&gt;
+						&lt;/button&gt;
+					&lt;/li&gt;
+				&lt;/ul&gt;
+				&lt;div class="scroll-btns" ng-if="c.data.items.length &gt; c.itemDisplayCount"&gt;
+					&lt;button class="btn btn-primary" ng-click="c.scrollUp()" aria-label="${Scroll up}" uib-tooltip="{{c.i18n.getMessage('scroll_up')}}"&gt;
+						&lt;span class="fa fa-chevron-up"&gt;&lt;/span&gt;
+					&lt;/button&gt;
+					&lt;button class="btn btn-primary" ng-click="c.scrollDown()" aria-label="${Scroll down}" uib-tooltip="{{c.i18n.getMessage('scroll_down')}}"&gt;
+						&lt;span class="fa fa-chevron-down"&gt;&lt;/span&gt;
+					&lt;/button&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;button class="nav-arrow left-arrow btn" ng-click="c.scrollUp()" ng-if="c.data.items.length &gt; 1 &amp;&amp; c.forceDots &amp;&amp; !data.isMobileApp" aria-label="${Previous item}"&gt;
+				&lt;div class="arrow-background"&gt;&lt;/div&gt;
+				&lt;span class="fa fa-chevron-circle-left"&gt;&lt;/span&gt;
+			&lt;/button&gt;
+			&lt;button class="nav-arrow right-arrow btn" ng-click="c.scrollDown()" ng-if="c.data.items.length &gt; 1 &amp;&amp; c.forceDots&amp;&amp; !data.isMobileApp" aria-label="${Next item}"&gt;
+				&lt;div class="arrow-background"&gt;&lt;/div&gt;
+				&lt;span class="fa fa-chevron-circle-right"&gt;&lt;/span&gt;
+			&lt;/button&gt;
+			&lt;div class="dots" ng-if="c.data.items.length &gt; 1 &amp;&amp; c.forceDots"&gt;
+				&lt;ul class="list-unstyled"&gt;
+					&lt;li ng-repeat="ceItem in c.data.items"&gt;
+						&lt;button class="dot btn" ng-click="c.clickItem($index)" ng-class="{ active: c.activeItem.sys_id === ceItem.sys_id }" aria-label="{{ceItem.heading_text? ceItem.heading_text : 'Carousel dot' }}"&gt;&lt;/button&gt;
+					&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="widget-container-spacing-mobile" ng-if="c.data.items.length &gt; 1 &amp;&amp; c.forceDots &amp;&amp; data.isMobileApp"&gt;&lt;/div&gt;
+	&lt;/sp-panel&gt;
+&lt;/section&gt;
+]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;</payload>
+        <sys_class_name>sp_rel_widget_clone</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-26 12:59:29</sys_created_on>
+        <sys_id>c720ed919776111065dcf8b3f153af13</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>c7206d919776111065dcf8b3f153af8f</sys_name>
+        <sys_package display_value="Next Level Academy" source="x_849329_nextlevel">00dd0a5a9722511065dcf8b3f153afd8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Next Level Academy">00dd0a5a9722511065dcf8b3f153afd8</sys_scope>
+        <sys_update_name>sp_rel_widget_clone_c720ed919776111065dcf8b3f153af13</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-26 12:59:29</sys_updated_on>
+    </sp_rel_widget_clone>
+</record_update>
